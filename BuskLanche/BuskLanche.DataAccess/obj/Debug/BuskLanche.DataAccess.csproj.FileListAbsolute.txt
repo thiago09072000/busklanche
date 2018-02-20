@@ -1,0 +1,5 @@
+c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\bin\Debug\BuskLanche.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\bin\Debug\BuskLanche.DataAccess.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.pdb
