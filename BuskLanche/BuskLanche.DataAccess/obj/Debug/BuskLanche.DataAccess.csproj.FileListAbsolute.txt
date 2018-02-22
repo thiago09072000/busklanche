@@ -3,3 +3,8 @@ c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataA
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.dll
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.pdb
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.DataAccess\bin\Debug\BuskLanche.DataAccess.dll
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.DataAccess\bin\Debug\BuskLanche.DataAccess.pdb
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.dll
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.DataAccess\obj\Debug\BuskLanche.DataAccess.pdb

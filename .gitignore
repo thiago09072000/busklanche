@@ -8,3 +8,8 @@
 /BuskLanche/BuskLanche.DataAccess/BuskLanche.DataAccess.csproj.user
 /BuskLanche/BuskLanche.DataAccess/bin
 /BuskLanche/BuskLanche.DataAccess/obj
+BuskLanche.DataAccess.csproj.user
+bin
+obj
+BuskLanche.Models.csproj.user
+BuskLanche.WebUI.csproj.user

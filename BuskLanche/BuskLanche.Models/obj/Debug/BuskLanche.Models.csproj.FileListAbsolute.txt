@@ -3,3 +3,8 @@ c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.Model
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.dll
 c:\users\aluno\documents\visual studio 2015\Projects\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.pdb
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\bin\Debug\BuskLanche.Models.dll
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\bin\Debug\BuskLanche.Models.pdb
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.csprojResolveAssemblyReference.cache
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.dll
+C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.pdb
