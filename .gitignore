@@ -1,3 +1,7 @@
+bin
+bin/*
+obj
+obj/*
 /BuskLanche/.vs
 /BuskLanche/.vs/*
 /BuskLanche/BuskLanche.WebUI/ApplicationInsights.config
