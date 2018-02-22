@@ -13,3 +13,4 @@ bin
 obj
 BuskLanche.Models.csproj.user
 BuskLanche.WebUI.csproj.user
+/BuskLanche/BuskLanche.WebUI/*.user
