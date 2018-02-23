@@ -1,4 +1,0 @@
-C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\bin\Debug\BuskLanche.Models.dll
-C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\bin\Debug\BuskLanche.Models.pdb
-C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.dll
-C:\Users\andradeti\Documents\GitHub\busklanche\BuskLanche\BuskLanche.Models\obj\Debug\BuskLanche.Models.pdb
