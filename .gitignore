@@ -23,3 +23,6 @@ obj/*
 /BuskLanche/BuskLanche.WebUI/*.user
 /BuskLanche/BuskLanche.Models/*.user
 /BuskLanche/BuskLanche.DataAccess/*.user
+*.dll
+*.pdb
+*.cache
