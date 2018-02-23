@@ -87,3 +87,5 @@ Ankh.NoLoad
 !/packages/*/lib/*/*.dll
 .vs
 BuskLanche.DataAccess.csproj.user
+*.user
+.vs
