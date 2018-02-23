@@ -1,0 +1,5 @@
+CREATE DATABASE BuskLanche
+GO
+
+USE BuskLanche
+GO
