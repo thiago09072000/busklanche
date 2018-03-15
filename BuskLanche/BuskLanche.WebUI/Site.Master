@@ -36,21 +36,15 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
-                    <span class="navbar-text" style="color: darkblue; font-size: medium; padding-left: 25%;">Usuário consumidor <a href="#" class="navbar-link" style="color: darkblue">José pão</a></span>
-                    <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large">Sair</button>
+                    <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Login</button>
+                    <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Cadastro</button>
+                    <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Sobre</button>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <div class="row">
-            <div class="col-lg-12">
-                <ol class="breadcrumb">
-                    <li><a href="#">Voltar</a></li>
-                    <li><a href="active">Ambulante</a></li>
-                </ol>
-            </div>
-        </div>
+        
 
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
