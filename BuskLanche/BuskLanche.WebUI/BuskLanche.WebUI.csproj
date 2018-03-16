@@ -137,6 +137,7 @@
   <ItemGroup>
     <Content Include="banco.sql" />
     <Content Include="CadastroAnunciante1.aspx" />
+    <Content Include="CadastroAnunciante2.aspx" />
     <Content Include="CadastroConsumidor.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -215,6 +216,13 @@
     </Compile>
     <Compile Include="CadastroAnunciante1.aspx.designer.cs">
       <DependentUpon>CadastroAnunciante1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroAnunciante2.aspx.cs">
+      <DependentUpon>CadastroAnunciante2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroAnunciante2.aspx.designer.cs">
+      <DependentUpon>CadastroAnunciante2.aspx</DependentUpon>
     </Compile>
     <Compile Include="CadastroConsumidor.aspx.cs">
       <DependentUpon>CadastroConsumidor.aspx</DependentUpon>
