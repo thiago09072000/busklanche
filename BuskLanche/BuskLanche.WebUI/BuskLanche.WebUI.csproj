@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="banco.sql" />
+    <Content Include="CadastroConsumidor.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -207,6 +208,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CadastroConsumidor.aspx.cs">
+      <DependentUpon>CadastroConsumidor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroConsumidor.aspx.designer.cs">
+      <DependentUpon>CadastroConsumidor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
