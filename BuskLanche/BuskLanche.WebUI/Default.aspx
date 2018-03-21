@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 style="font-weight: bold; color: red">Busck</h1>
+            <h1 style="font-weight: bold; color: red; font-size: 50px">Busk</h1>
         </div>
     </div>
     <div class="col-lg-12">
