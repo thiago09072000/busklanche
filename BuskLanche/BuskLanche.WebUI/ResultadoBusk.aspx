@@ -13,13 +13,13 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12">
-                        <asp:GridView ID="grdMarca" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
+                        <asp:GridView ID="grdComercio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                             <Columns>
                                 <asp:TemplateField HeaderText="Nome">
                                     <HeaderStyle Width="30%" />
                                     <ItemStyle Width="30%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblNomeMarca" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
+                                        <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -60,8 +60,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
-                        <asp:Button ID="btnVoltar" runat="server" CssClass="btn btn-danger" style="font-size: large" Text="Voltar"/>
-                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" style="font-size: large" Text="Selecionar"/>
+                        <asp:Button ID="btnVoltar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" />
+                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Selecionar" />
                     </div>
                 </div>
             </form>

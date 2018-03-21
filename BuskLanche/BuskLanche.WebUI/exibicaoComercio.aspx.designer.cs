@@ -10,7 +10,7 @@
 namespace BuskLanche.WebUI {
     
     
-    public partial class ResultadoBusk {
+    public partial class exibicaoComercio {
         
         /// <summary>
         /// Form2 control.
@@ -22,13 +22,13 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
         
         /// <summary>
-        /// grdComercio control.
+        /// grdCardapio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdComercio;
+        protected global::System.Web.UI.WebControls.GridView grdCardapio;
         
         /// <summary>
         /// btnVoltar control.
