@@ -162,6 +162,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="GerenciamentoComercio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ResultadoBusk.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -277,6 +278,13 @@
     </Compile>
     <Compile Include="exibicaoComercio.aspx.designer.cs">
       <DependentUpon>exibicaoComercio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciamentoComercio.aspx.cs">
+      <DependentUpon>GerenciamentoComercio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GerenciamentoComercio.aspx.designer.cs">
+      <DependentUpon>GerenciamentoComercio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
