@@ -142,6 +142,7 @@
     <Content Include="CadastroAnunciante3.aspx" />
     <Content Include="CadastroAnunciante4.aspx" />
     <Content Include="CadastroConsumidor.aspx" />
+    <Content Include="Cardapio.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -257,6 +258,13 @@
     </Compile>
     <Compile Include="CadastroConsumidor.aspx.designer.cs">
       <DependentUpon>CadastroConsumidor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cardapio.aspx.cs">
+      <DependentUpon>Cardapio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cardapio.aspx.designer.cs">
+      <DependentUpon>Cardapio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
