@@ -135,6 +135,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Avaliacao.aspx" />
     <Content Include="banco.sql" />
     <Content Include="CadastroAnunciante1.aspx" />
     <Content Include="CadastroAnunciante2.aspx" />
@@ -214,6 +215,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Avaliacao.aspx.cs">
+      <DependentUpon>Avaliacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Avaliacao.aspx.designer.cs">
+      <DependentUpon>Avaliacao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CadastroAnunciante1.aspx.cs">
       <DependentUpon>CadastroAnunciante1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

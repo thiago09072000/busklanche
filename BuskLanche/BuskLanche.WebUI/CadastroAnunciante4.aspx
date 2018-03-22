@@ -49,7 +49,7 @@
             <div class="form-group">
                 <div class="col-lg-12">
                     <label class="control-label" style="font-size: x-large; margin-top: 50px">Descreva o seu comércio:</label>
-                     <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
             </div>
 

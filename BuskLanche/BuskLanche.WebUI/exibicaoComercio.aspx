@@ -17,7 +17,7 @@
                         <label class="control-label" style="font-size: 20px; margin-top: 5px">Horario de Funcionamento</label>
                     </div>
                     <div class="col-lg-7">
-
+                        <%--estrelas--%>
                     </div>
                 </div>
                 <div class="form-group">
