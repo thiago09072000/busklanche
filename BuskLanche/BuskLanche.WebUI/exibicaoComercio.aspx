@@ -16,8 +16,26 @@
                         <label class="control-label" style="font-size: 20px">Telefone: Telefone do Comercio</label>
                         <label class="control-label" style="font-size: 20px; margin-top: 5px">Horario de Funcionamento</label>
                     </div>
-                    <div class="col-lg-7">
-                        <%--estrelas--%>
+                    <div class="col-lg-7 text-center">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg"  style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg"  style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="form-group">
