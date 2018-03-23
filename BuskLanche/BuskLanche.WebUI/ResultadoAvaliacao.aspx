@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Avaliacao.aspx.cs" Inherits="BuskLanche.WebUI.Avaliacao" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResultadoAvaliacao.aspx.cs" Inherits="BuskLanche.WebUI.ResultadoAvaliacao" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -48,28 +48,25 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-lg-7">
-                        <label class="control-label" style="font-size: x-large; margin-top: 50px">Fazer Comentário:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-                    </div>
-                    <div class="col-lg-5">
-                        <label class="control-label" style="font-size: x-large; margin-top: 50px">Avaliar:</label>
+
+                    <div class="col-lg-12">
+                        <label class="control-label" style="font-size: x-large; margin-top: 50px">Média de avaliações:</label>
                         <table>
                             <tr>
                                 <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
                                     <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
                                 </td>
                             </tr>
                         </table>

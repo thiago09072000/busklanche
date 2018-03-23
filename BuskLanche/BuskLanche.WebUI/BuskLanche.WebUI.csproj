@@ -164,7 +164,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="GerenciamentoComercio.aspx" />
+    <Content Include="Images\estrela1.jpg" />
+    <Content Include="Images\estrela2.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="ResultadoAvaliacao.aspx" />
     <Content Include="ResultadoBusk.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -305,6 +308,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoAvaliacao.aspx.cs">
+      <DependentUpon>ResultadoAvaliacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultadoAvaliacao.aspx.designer.cs">
+      <DependentUpon>ResultadoAvaliacao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ResultadoBusk.aspx.cs">
       <DependentUpon>ResultadoBusk.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
