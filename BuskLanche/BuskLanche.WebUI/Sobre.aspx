@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
        <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 style="font-weight: bold; color: red; font-size: 50px">Oque é o BuskLanche ?  </h1>
+            <h1 style="font-weight: bold; color: red; font-size: 50px">O que é o BuskLanche ?  </h1>
         </div>
     </div>
 
