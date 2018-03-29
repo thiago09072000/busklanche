@@ -34,17 +34,27 @@ create table CadastroConsumidor
 	cpfConsumidor		varchar(15)
 )
 
+drop table CadastroConsumidor
+
 create table CadastroDeCardapio
 (
 	idCadCardapio	integer primary key identity(1,1),
+	idCadComercio	integer references CadastroComercio,
 	nome			varchar(200),
 	ingrediente		varchar(200),
 	preco			varchar(100)
 )
 
+drop table CadastroDeCardapio
+
+drop table Avaliacoes
 create table Avaliacoes
 (
 	idAvaliacoes	integer primary key identity(1,1),
+	idCadComercio	integer references		CadastroComercio,
+	idCadConsumidor	integer references      CadastroConsumidor,
 	avaliacao		integer,
 	comentario		varchar(max)
 )
+
+select * from Avaliacoes
