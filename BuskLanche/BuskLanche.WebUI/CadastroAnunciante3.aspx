@@ -3,49 +3,53 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="row">
-        <div class="form-horizontal">
+        <form id="Form2" runat="server" class="form-horizontal">
             <div class="form-group">
                 <div class="col-md-3">
-                    <label class="control-label" style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</label>
+                    <asp:Label ID="lblCadastro" runat="server" CssClass="control-label" Style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</asp:Label>
+
                 </div>
+
                 <div class="col-md-9">
-                    <label class="control-label" style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante</label>
+                    <asp:Label ID="lblUsuarioAnunciane" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante </asp:Label>
                 </div>
+
             </div>
 
             <div class="form-group">
                 <div class="col-md-12">
-                    <label class="control-label" style="font-size: 30px; margin-left: 30px; color: black">Inserir: Representante do comércio</label>
+                    <asp:Label ID="lblRepresentanteComercio" runat="server" CssClass="control-label" Style="font-size: 30px; margin-left: 30px; color: black">Inserir: Representante do comércio</asp:Label>
                 </div>
             </div>
 
+
             <div class="form-group">
                 <div class="col-lg-12">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Nome completo:</label>
-                    <input type="text" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblNomeCompleto" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Nome completo:</asp:Label>
+                    <asp:TextBox ID="txtNomeCompleto" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-8">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Email:</label>
-                    <input type="email" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblEmail" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
 
                 <div class="col-lg-4">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Senha:</label>
-                    <input type="password" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblSenha" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Senha:</asp:Label>
+                    <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-lg-6">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Celular:</label>
-                    <input type="tel" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblCelular" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Celular:</asp:Label>
+                    <asp:TextBox ID="txtCelular" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
 
                 <div class="col-lg-6">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">CPF:</label>
-                    <input type="text" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblCPF" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">CPF:</asp:Label>
+                    <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
 
@@ -53,13 +57,14 @@
 
             <div class="form-group">
                 <div class="col-lg-6">
-                    <label class="control-label" style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</label>
+                    <asp:Label ID="lblAlerta" runat="server" CssClass="control-label" Style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</asp:Label>
                 </div>
                 <div class="col-lg-6 text-right">
-                    <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px">Proxímo</button>
+
+                    <asp:Button ID="btnProximoCad3" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
 </asp:Content>
