@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.Models
 {
-    public class Usuario
+    class Consumidor
     {
         public int Id { get; set; }
+
+        public string Nome { get; set; }
+
+        public string Email { get; set; }
+
+        public string Senha { get; set; }
+
+        public int Cpf { get; set; }
     }
 }
