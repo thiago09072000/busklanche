@@ -11,5 +11,23 @@ namespace BuskLanche.WebUI {
     
     
     public partial class CadastroAnunciante2 {
+        
+        /// <summary>
+        /// lblCadastro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCadastro;
+        
+        /// <summary>
+        /// lblUsuarioAnunciante control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUsuarioAnunciante;
     }
 }

@@ -6,10 +6,10 @@
         <div class="form-horizontal">
             <div class="form-group">
                 <div class="col-md-3">
-                    <label class="control-label" style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</label>
+                    <asp:Label ID="lblCadastro" runat="server" CssClass="control-label" style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</asp:Label>
                 </div>
                 <div class="col-md-9">
-                    <label class="control-label" style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante</label>
+                    <asp:Label ID="lblUsuarioAnunciante" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante</asp:Label>
                 </div>
             </div>
             <div class="form-group">
