@@ -13,8 +13,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-5">
-                        <label class="control-label" style="font-size: 20px">Telefone: Telefone do Comercio</label>
-                        <label class="control-label" style="font-size: 20px; margin-top: 5px">Horario de Funcionamento</label>
+                        <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" style="font-size: 20px">Telefone: Telefone do Comercio</asp:Label>
+                        <asp:Label ID="lblHorarios" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 5px">Horario de Funcionamento</asp:Label>
                     </div>
                     <div class="col-lg-7 text-center">
                         <table>
