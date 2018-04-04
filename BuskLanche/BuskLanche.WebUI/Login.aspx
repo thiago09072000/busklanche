@@ -7,39 +7,47 @@
             <h1 style="font-weight: bold; color: red; font-size: 50px">Login</h1>
         </div>
     </div>
+
     <div class="row">
-        <form class="form-horizontal">
+        <form id="Form2" runat="server" class="form-horizontal">
+
             <div class="form-group">
                 <div class="col-lg-12">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Email:</label>
-                    <input type="email" class="form-control" style="font-size: x-large" />
+                     <asp:Label ID="lblEmail" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
+                      <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" style="font-size: x-large"></asp:TextBox>
                 </div>
+          
             </div>
+
             <div class="form-group">
                 <div class="col-lg-12">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Senha:</label>
-                       <input type="password" class="form-control" style="font-size: x-large" />
+                      <asp:Label ID="lblSenha" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Senha:</asp:Label>
+                       <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-lg-4">
-                       <label class="control-label" style="font-size: x-large; margin-top: 50px">Usuário: </label>
+                    <asp:Label ID="lblUsuario" runat="server" CssClass="control-label"  style="font-size: x-large; margin-top: 50px">Usuário: </asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <input type="radio" style="font-size: x-large; margin-top: 70px" name="usuario" />
-                    <label class="control-label" style="font-size: large">Anúnciante</label>
+                     <asp:RadioButton id="TxtAnunciante" GroupName="usuario" Text="Anunciante"  runat="server"/>
+                   
                 </div>
                 <div class="col-lg-4">
-                    <input type="radio" style="font-size: x-large; margin-top: 70px" name="usuario" />
-                    <label class="control-label" style="font-size: large">Consumidor</label>
+                        <asp:RadioButton id="TxtUsuario" GroupName="usuario" Text="Consumidor"  runat="server"/>
+                   
                 </div>
             </div>
+
+         
+
             <div class="form-group">
                 <div class="col-lg-12 text-right">
-                    <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px">Buscar</button>
+                <asp:Button ID="btnLogar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Logar" />
                 </div>
             </div>
-           
+    
         </form>
     </div>
- </asp:Content>
+</asp:Content>
