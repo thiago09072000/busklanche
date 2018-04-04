@@ -7,11 +7,11 @@
             <form id="Form2" runat="server" class="form-horizontal">
                 <div class="form-group">
                     <div class="col-md-3">
-                        <label class="control-label" style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</label>
+                        <asp:Label ID="lblAvalSobre" runat="server" CssClass="control-label" style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</asp:Label>
                         <hr />
                     </div>
                     <div class="col-md-9">
-                        <label class="control-label" style="font-size: 20px; margin-top: 7px">Nome do Comércio</label>
+                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 7px">Nome do Comércio</asp:Label>
                         <hr />
                     </div>
                 </div>
