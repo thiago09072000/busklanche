@@ -44,15 +44,15 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-center">
-                        <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px">Inserir</button>
-                        <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px">Alterar</button>
-                        <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px">Excluir</button>
+                        <asp:Button ID="btnInserir" runat="server" Text="Inserir" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" />
+                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" />
+                        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
-                        <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px">Salvar</button>
+                        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
                     </div>
                 </div>
 
