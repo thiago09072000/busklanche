@@ -8,35 +8,35 @@
         </div>
     </div>
     <div class="col-lg-12">
-        <form class="form-horizontal">
+        <form id="Form2" runat="server" class="form-horizontal">
             <div class="form-group">
                 <div class="col-lg-12">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Informe seu CEP atual</label>
-                    <input type="text" class="form-control" style="font-size: x-large" />
+                    <asp:Label ID="lblInfCEP" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Informe seu CEP atual</asp:Label>
+                    <asp:TextBox ID="txtInfCEP" runat="server" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-12">
-                    <label class="control-label" style="font-size: x-large; margin-top: 50px">Listar por:</label>
+                    <asp:Label ID="lblListarPor" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Listar por:</asp:Label>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-4">
-                    <input type="checkbox" style="font-size: x-large" />
-                    <label class="control-label" style="font-size: large">Mais Proxímos</label>
+                    <asp:CheckBox ID="txtMaisProx" runat="server" style="font-size: x-large" />
+                    <asp:Label ID="lblMaisProx" runat="server" CssClass="control-label" style="font-size: large">Mais Proxímos</asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <input type="checkbox" style="font-size: x-large" />
-                    <label class="control-label" style="font-size: large">Menor Preço</label>
+                    <asp:CheckBox ID="txtMenorPreco" runat="server" style="font-size: x-large" />
+                    <asp:Label ID="lblMenorPreco" runat="server" CssClass="control-label" style="font-size: large">Menor Preço</asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <input type="checkbox" style="font-size: x-large" />
-                    <label class="control-label" style="font-size: large">Melhores Avaliações</label>
+                    <asp:CheckBox ID="txtMelhorAva" runat="server" style="font-size: x-large" />
+                    <asp:Label ID="lblMelhorAva" runat="server" CssClass="control-label" style="font-size: large">Melhores Avaliações</asp:Label>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-lg-12 text-right">
-                    <button type="button" class="btn btn-danger" style="font-size: large; margin-top: 100px">Buscar</button>
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
                 </div>
             </div>
         </form>

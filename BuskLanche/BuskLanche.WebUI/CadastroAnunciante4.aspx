@@ -40,7 +40,7 @@
             <div class="form-group">
                 <div class="col-lg-12">
                     <asp:Label ID="lblDescrevaComercio" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Descreva o seu comércio:</asp:Label>
-                    <asp:TextBox ID="txtDescrevaComercio" runat="server" TextMode="Multiline" CssClass="form-control" Rows="5"></asp:TextBox>
+                    <asp:TextBox ID="txtDescrevaComercio" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="5"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
