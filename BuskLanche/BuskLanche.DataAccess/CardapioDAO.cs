@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
-    public class Class1
+    class CardapioDAO
     {
     }
 }
