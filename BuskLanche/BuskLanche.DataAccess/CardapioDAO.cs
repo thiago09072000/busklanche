@@ -29,4 +29,7 @@ namespace BuskLanche.DataAccess
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }
+            }
+        }
+    }
 }
