@@ -31,5 +31,48 @@ namespace BuskLanche.DataAccess
                 }
             }
         }
+
+        public List<Cardapio> BuscarTodos()
+        {
+            var lstCardapio = new List<Cardapio>();
+
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM CadastroDeCardapio";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+
+                    conn.Close();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        var Cardapio = new Cardapio()
+                        {
+                            Id = Convert.ToInt32(row["idCadCardapio"]),
+                            IdComercio = new Comercio()
+                            {
+                                Id = Convert.ToInt32(row["idCadComercio"]),
+                                NomeComercio = row["nomeComercio"].ToString()
+                            },
+                            Nome = row["nome"].ToString(),
+                            Ingrediente = row["ingrediente"].ToString(),
+                            Preco = row["preco"].ToString()
+                            
+                        };
+                        lstCardapio.Add(Cardapio);
+                    }
+                }
+            }
+
+            return (lstCardapio);
+        }
     }
 }
