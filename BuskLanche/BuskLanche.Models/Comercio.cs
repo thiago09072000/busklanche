@@ -10,7 +10,7 @@ namespace BuskLanche.Models
     {
         public int Id { get; set; }
 
-        public int Cnpj { get; set; }
+        public string Cnpj { get; set; }
 
         public string NomeComercio { get; set; }
 
@@ -18,9 +18,9 @@ namespace BuskLanche.Models
 
         public string Rua { get; set; }
 
-        public string Numero { get; set; }
+        public int Numero { get; set; }
 
-        public int Cep { get; set; }
+        public string Cep { get; set; }
 
         public string Complemeneto { get; set; }
 
@@ -30,7 +30,7 @@ namespace BuskLanche.Models
 
         public string SenhaRepresentante { get; set; }
 
-        public int CpfRepresentante { get; set; }
+        public string CpfRepresentante { get; set; }
 
         public string TelefoneRepresentante { get; set; }
 

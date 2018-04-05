@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,8 +17,13 @@ namespace BuskLanche.WebUI
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            var obj = new Comercio();
+            obj.EstiloDoLanche = txtEstiloLanches.Text;
+            //obj.HorarioAbertura = ;
+            //obj.HorarioEncerramento = ;
+            obj.DescricaoComercio = txtDescrevaComercio.Text;
 
+            Response.Redirect("Login.aspx");
         }
     }
 }

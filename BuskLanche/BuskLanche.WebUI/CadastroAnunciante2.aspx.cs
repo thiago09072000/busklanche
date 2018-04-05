@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,13 @@ namespace BuskLanche.WebUI
 
         protected void btnProximoCad_Click(object sender, EventArgs e)
         {
+            var obj = new Comercio();
+            obj.Bairro = txtBairro.Text;
+            obj.Cep = txtCEP.Text;
+            obj.Numero = Convert.ToInt32(txtNumero);
+            obj.Rua = txtRua.Text;
+            obj.Complemeneto = txtComplemento.Text;
+
             Response.Redirect("CadastroAnunciante3.aspx");
         }
     }
