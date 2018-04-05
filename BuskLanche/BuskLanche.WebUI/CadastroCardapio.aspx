@@ -11,7 +11,6 @@
                         <hr />
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-lg-4">
                         <asp:Label ID="lblNomeLanche" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Nome:</asp:Label>
@@ -26,7 +25,6 @@
                         <asp:TextBox ID="txtPreco" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-lg-12 text-center">
                         <asp:Button ID="btnInserir" runat="server" Text="Inserir" class="btn btn-danger" Style="font-size: large; margin-top: 100px; margin-right: 100px" />
@@ -34,7 +32,7 @@
                         <asp:Button ID="btnExcluir" runat="server" Text="Excluir" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
                     </div>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <div class="col-lg-12 text-right">
                         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnSalvar_Click" />
                     </div>
@@ -70,13 +68,8 @@
                         </asp:GridView>
                     </div>
                 </div>
-
-               
-
-
             </form>
         </div>
     </div>
-
 
 </asp:Content>
