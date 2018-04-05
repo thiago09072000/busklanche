@@ -24,9 +24,9 @@
 
             <div class="form-group">
                 <div class="col-lg-12 text-left">
-                    <asp:Button ID="btnDados" runat="server" Text="Dados" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" />
-                    <asp:Button ID="btnCardápio" runat="server" Text="Cardápio" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" />
-                    <asp:Button ID="btnAvaliações" runat="server" Text="Avaliações" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnDados" runat="server" Text="Dados" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" OnClick="btnDados_Click" />
+                    <asp:Button ID="btnCardápio" runat="server" Text="Cardápio" class="btn btn-danger" style="font-size: large; margin-top: 100px; margin-right: 100px" OnClick="btnCardápio_Click" />
+                    <asp:Button ID="btnAvaliações" runat="server" Text="Avaliações" class="btn btn-danger" style="font-size: large; margin-top: 100px" OnClick="btnAvaliações_Click" />
                 </div>
             </div>
         </form>

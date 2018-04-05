@@ -74,7 +74,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
-                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" />
+                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" OnClick="btnSelecionar_Click" />
                     </div>
                 </div>
             </form>

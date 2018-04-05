@@ -35,8 +35,7 @@
                    
                 </div>
                 <div class="col-lg-4">
-                        <asp:RadioButton id="TxtUsuario" GroupName="usuario" Text="Consumidor"  runat="server"/>
-                   
+                        <asp:RadioButton id="TxtUsuario" GroupName="usuario" Text="Consumidor"  runat="server"/>   
                 </div>
             </div>
 

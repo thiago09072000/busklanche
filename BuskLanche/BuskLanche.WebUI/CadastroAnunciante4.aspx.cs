@@ -13,5 +13,11 @@ namespace BuskLanche.WebUI
         {
 
         }
+
+        protected void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+
+        }
     }
 }

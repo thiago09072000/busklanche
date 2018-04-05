@@ -54,7 +54,7 @@
                     <asp:Label ID="lblcamposObrigatorios" runat="server" CssClass="control-label" Style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</asp:Label>
                 </div>
                 <div class="col-lg-6 text-right">
-                    <asp:Button ID="btnProximoCad" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnProximoCad" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnProximoCad_Click" />
                 </div>
             </div>
         </form>

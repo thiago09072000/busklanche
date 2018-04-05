@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-lg-6 text-right">
 
-                    <asp:Button ID="btnProximoCad3" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnProximoCad3" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnProximoCad3_Click" />
                 </div>
             </div>
         </form>

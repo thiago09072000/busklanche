@@ -13,5 +13,11 @@ namespace BuskLanche.WebUI
         {
 
         }
+
+        protected void btnProximoCad_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastroAnunciante2.aspx");
+
+        }
     }
 }

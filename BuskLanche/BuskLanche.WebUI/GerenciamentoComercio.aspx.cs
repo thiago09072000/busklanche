@@ -13,5 +13,20 @@ namespace BuskLanche.WebUI
         {
 
         }
+
+        protected void btnDados_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DadosCadastrados.aspx");
+        }
+
+        protected void btnCardápio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cardapio.aspx");
+        }
+
+        protected void btnAvaliações_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ResultadoAvaliacao.aspx");
+        }
     }
 }

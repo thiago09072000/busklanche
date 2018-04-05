@@ -13,5 +13,10 @@ namespace BuskLanche.WebUI
         {
 
         }
+
+        protected void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GerenciamentoComercio.aspx");
+        }
     }
 }

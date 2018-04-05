@@ -16,7 +16,7 @@ namespace BuskLanche.WebUI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ResultadoBusk.aspx");
         }
     }
 }
