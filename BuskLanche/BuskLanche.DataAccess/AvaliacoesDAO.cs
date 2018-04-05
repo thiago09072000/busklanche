@@ -32,5 +32,51 @@ namespace BuskLanche.DataAccess
                 }
             }
         }
+
+        public List<Avaliacoes> BuscarTodos()
+        {
+            var lstAvaliacoes = new List<Avaliacoes>();
+
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM Avaliacoes";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+
+                    conn.Close();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        var Avaliacoes = new Avaliacoes()
+                        {
+                            Id = Convert.ToInt32(row["id"]),
+                            IdComercio = new Comercio()
+                            {
+                                Id = Convert.ToInt32(row["idCadComercio"]),
+                                NomeComercio = row["nomeComercio"].ToString()
+                            },
+                            IdConsumidor = new Consumidor()
+                            {
+                                Id = Convert.ToInt32(row["idCadConsumidor"]),
+                                Nome = row["nomeConsumidor"].ToString()
+                            },
+                            Avalicacao = row["avaliacao"].ToString(),
+                            Comertario = row["comentario"].ToString()
+                        };
+                        lstAvaliacoes.Add(Avaliacoes);
+                    }
+                }
+            }
+
+            return (lstAvaliacoes);
+        }
     }
 }
