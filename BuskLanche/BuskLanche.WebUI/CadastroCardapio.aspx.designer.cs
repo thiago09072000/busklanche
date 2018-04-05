@@ -10,7 +10,7 @@
 namespace BuskLanche.WebUI {
     
     
-    public partial class Cardapio {
+    public partial class CadastroCardapio {
         
         /// <summary>
         /// Form2 control.
