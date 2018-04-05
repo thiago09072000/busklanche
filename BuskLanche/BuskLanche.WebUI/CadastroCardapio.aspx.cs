@@ -18,8 +18,12 @@ namespace BuskLanche.WebUI
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            
+            var obj = new Cardapio();
+            obj.Nome = txtNomeLanche.Text;
+            obj.Ingrediente = txtIngredientes.Text;
+            obj.Preco = txtPreco.Text;        
             Response.Redirect("GerenciamentoComercio.aspx");
         }
     }
 }
+
