@@ -47,5 +47,56 @@ namespace BuskLanche.DataAccess
                 }
             }
         }
+
+        public List<Comercio> BuscarTodos()
+        {
+            var lstComercio = new List<Comercio>();
+
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM CadastroComercio";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+
+                    conn.Close();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        var Comercio = new Comercio()
+                        {
+                            Id = Convert.ToInt32(row["idCadComercio"]),
+                            Cnpj = row["cnpj"].ToString(),
+                            NomeComercio = row["nomeComercio"].ToString(),
+                            Bairro = row["bairro"].ToString(),
+                            Rua = row["rua"].ToString(),
+                            Numero = Convert.ToInt32(row["numero"]),
+                            Cep = row["cep"].ToString(),
+                            Complemeneto = row["complemento"].ToString(),
+                            NomeRepresentante = row["nomeRepresentante"].ToString(),
+                            EmailRepresentante = row["emailRepresentante"].ToString(),
+                            SenhaRepresentante = row["senhaRepresentante"].ToString(),
+                            CpfRepresentante = row["cpfRepresentante"].ToString(),
+                            TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                            EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                            //HorarioAbertura
+                            //HorarioEncerramento
+                            DescricaoComercio = row["DescricaoComercio"].ToString()
+
+                        };
+                        lstComercio.Add(Comercio);
+                    }
+                }
+            }
+
+            return (lstComercio);
+        }
     }
 }
