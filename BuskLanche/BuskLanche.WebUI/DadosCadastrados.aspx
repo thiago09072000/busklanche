@@ -86,7 +86,7 @@
 
             <div class="form-group">
                 <div class="col-lg-12 text-right">
-                    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnSalvar_Click" />
                 </div>
             </div>
 

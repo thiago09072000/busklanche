@@ -13,5 +13,15 @@ namespace BuskLanche.WebUI
         {
 
         }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("exibicaoComercio.aspx");
+        }
     }
 }
