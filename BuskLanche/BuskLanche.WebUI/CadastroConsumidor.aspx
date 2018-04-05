@@ -48,7 +48,7 @@
                     <asp:Label ID="lblcamposObrigatorios" runat="server" CssClass="control-label" style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</asp:Label>
                 </div>
                 <div class="col-lg-6 text-right">
-                    <asp:Button ID="btnFinalizar" runat="server" Text="Finalizar" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnFinalizar" runat="server" Text="Finalizar" class="btn btn-danger" style="font-size: large; margin-top: 100px" OnClick="btnFinalizar_Click" />
                 </div>
             </div>
         </form>

@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-12 text-right">
-                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-danger" style="font-size: large; margin-top: 100px" />
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-danger" style="font-size: large; margin-top: 100px" OnClick="btnBuscar_Click" />
                 </div>
             </div>
         </form>

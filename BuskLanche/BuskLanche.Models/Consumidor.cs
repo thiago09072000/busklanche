@@ -16,6 +16,6 @@ namespace BuskLanche.Models
 
         public string Senha { get; set; }
 
-        public int Cpf { get; set; }
+        public string Cpf { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BuskLanche.DataAccess;
+using BuskLanche.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,19 @@ namespace BuskLanche.WebUI
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            var obj = new Consumidor();
+            obj.Nome = txtNomeConsumidor.Text;
+            obj.Senha = txtSenha.Text;
+            obj.Email = txtEmail.Text;
+            obj.Cpf = txtCPF.Text;
+
+            new ConsumidorDAO().Inserir(obj);
+
+            Response.Redirect("Login.aspx");
         }
     }
 }
