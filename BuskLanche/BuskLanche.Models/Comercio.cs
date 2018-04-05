@@ -32,6 +32,8 @@ namespace BuskLanche.Models
 
         public int CpfRepresentante { get; set; }
 
+        public string TelefoneRepresentante { get; set; }
+
         public string EstiloDoLanche { get; set; }
 
         public string HorarioAbertura { get; set; }
