@@ -21,7 +21,7 @@ namespace BuskLanche.WebUI
 
         protected void btnCardápio_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Cardapio.aspx");
+            Response.Redirect("CadastroCardapio.aspx");
         }
 
         protected void btnAvaliações_Click(object sender, EventArgs e)
