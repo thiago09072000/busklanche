@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.Models
 {
-    class Cardapio
+     public class Cardapio
     {
         public int Id { get; set; }
 
