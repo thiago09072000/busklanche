@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.Models
 {
-    class Consumidor
+    public class Consumidor
     {
         public int Id { get; set; }
 

@@ -46,6 +46,12 @@
     <Compile Include="ConsumidorDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuskLanche.Models\BuskLanche.Models.csproj">
+      <Project>{2945284f-95fe-4937-bc72-27632055f87a}</Project>
+      <Name>BuskLanche.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -355,7 +355,16 @@
       <DependentUpon>Sobre.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BuskLanche.DataAccess\BuskLanche.DataAccess.csproj">
+      <Project>{12aa9c21-33e8-4b62-a23b-b3632e89231f}</Project>
+      <Name>BuskLanche.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuskLanche.Models\BuskLanche.Models.csproj">
+      <Project>{2945284f-95fe-4937-bc72-27632055f87a}</Project>
+      <Name>BuskLanche.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

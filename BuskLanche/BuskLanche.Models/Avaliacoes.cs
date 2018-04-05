@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.Models
 {
-    class Avaliacoes
+    public class Avaliacoes
     {
         public int Id { get; set; }
 
