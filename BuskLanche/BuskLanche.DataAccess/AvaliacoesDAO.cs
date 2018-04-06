@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
-    class AvaliacoesDAO
+    public class AvaliacoesDAO
     {
         public void Inserir(Avaliacoes obj)
         {

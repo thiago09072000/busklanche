@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
-    class ComercioDAO
+    public class ComercioDAO
     {
         public void Inserir(Comercio obj)
         {

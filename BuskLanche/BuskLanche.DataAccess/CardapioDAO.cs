@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
-    class CardapioDAO
+    public class CardapioDAO
     {
         public void Inserir(Cardapio obj)
         {
