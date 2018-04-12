@@ -57,11 +57,6 @@ namespace BuskLanche.DataAccess
                         var Cardapio = new Cardapio()
                         {
                             Id = Convert.ToInt32(row["idCadCardapio"]),
-                            IdComercio = new Comercio()
-                            {
-                                Id = Convert.ToInt32(row["idCadComercio"]),
-                                NomeComercio = row["nomeComercio"].ToString()
-                            },
                             Nome = row["nome"].ToString(),
                             Ingrediente = row["ingrediente"].ToString(),
                             Preco = row["preco"].ToString()

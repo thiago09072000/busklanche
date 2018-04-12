@@ -47,26 +47,26 @@
                         <asp:GridView ID="grdCardapio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                             <Columns>
                                 <asp:TemplateField HeaderText="Nome">
-                                    <HeaderStyle Width="30%" />
-                                    <ItemStyle Width="30%" />
+                                    <HeaderStyle Width="33%" />
+                                    <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblNomeCardapio" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
+                                        <asp:Label ID="lblNomeCardapio" runat="server" Text='<%# Bind("nome") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="Ingredientes">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="33%" />
+                                    <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblIngredientes" runat="server" Text='<%# Bind("Ingredientes") %>'></asp:Label>
+                                        <asp:Label ID="lblIngredientes" runat="server" Text='<%# Bind("ingredientes") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="Preço">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="33%" />
+                                    <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("Preco") %>'></asp:Label>
+                                        <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("preco") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
