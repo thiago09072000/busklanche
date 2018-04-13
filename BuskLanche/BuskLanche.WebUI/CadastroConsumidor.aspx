@@ -21,8 +21,8 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-12">
-                    <asp:Label ID="Label1" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
+                    <asp:Label ID="lblEmail" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
