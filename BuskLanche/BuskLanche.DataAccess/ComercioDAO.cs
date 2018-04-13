@@ -12,34 +12,66 @@ namespace BuskLanche.DataAccess
 {
     public class ComercioDAO
     {
-        public void Inserir(Comercio obj)
+        public int Inserir(Comercio obj)
         {
             using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
             {
-                string strSQL = @"INSERT INTO CadastroConsumidor (cnpj, nomeComercio, bairro, rua, numero, cep, complemento, nomeRepresentante, emailRepresentante, senhaRepresentante, 
+                string strSQL = @"INSERT INTO CadastroComercio (cnpj, nomeComercio, bairro, rua, numero, cep, complemento, nomeRepresentante, emailRepresentante, senhaRepresentante, 
                                                                   cpfRepresentante, telefoneRepresentante, estiloDoLanche, horarioAbertura, horarioEnceramento, DescricaoComercio) 
                                                           VALUES (@cnpj, @nomeComercio, @bairro, @rua, @numero, @cep, @complemento, @nomeRepresentante, @emailRepresentante, @senhaRepresentante, 
-                                                                  @cpfRepresentante, @telefoneRepresentante, @estiloDoLanche, @horarioAbertura, @horarioEnceramento, @DescricaoComercio)";
+                                                                  @cpfRepresentante, @telefoneRepresentante, @estiloDoLanche, @horarioAbertura, @horarioEnceramento, @DescricaoComercio);
+                                 SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = obj.Cnpj;
                     cmd.Parameters.Add("@nomeComercio", SqlDbType.VarChar).Value = obj.NomeComercio;
+                    cmd.Parameters.Add("@bairro", SqlDbType.VarChar).Value = obj.Bairro ?? string.Empty;
+                    cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua ?? string.Empty;
+                    cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
+                    cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep ?? string.Empty;
+                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemeneto ?? string.Empty;
+                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.NomeRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.EmailRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.SenhaRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@cpfRepresentante", SqlDbType.VarChar).Value = obj.CpfRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@telefoneRepresentante", SqlDbType.VarChar).Value = obj.TelefoneRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@estiloDoLanche", SqlDbType.VarChar).Value = obj.EstiloDoLanche ?? string.Empty;
+                    cmd.Parameters.Add("@horarioAbertura", SqlDbType.VarChar).Value = obj.HorarioAbertura ?? string.Empty;
+                    cmd.Parameters.Add("@horarioEnceramento", SqlDbType.VarChar).Value = obj.HorarioEncerramento ?? string.Empty;
+                    cmd.Parameters.Add("@DescricaoComercio", SqlDbType.VarChar).Value = obj.DescricaoComercio ?? string.Empty;
+
+                    conn.Open();
+                    obj.Id = Convert.ToInt32(cmd.ExecuteScalar());
+                    conn.Close();
+
+                    return obj.Id;
+                }
+            }
+        }
+
+        public void Atualizar2(Comercio obj)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"UPDATE CadastroComercio SET
+                                    bairro = @bairro,
+                                    rua = @rua,
+                                    numero = @numero,
+                                    cep = @cep,
+                                    complemento = @complemento
+                                 WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
                     cmd.Parameters.Add("@bairro", SqlDbType.VarChar).Value = obj.Bairro;
                     cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua;
                     cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
                     cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep;
                     cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemeneto;
-                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.NomeRepresentante;
-                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.EmailRepresentante;
-                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.SenhaRepresentante;
-                    cmd.Parameters.Add("@cpfRepresentante", SqlDbType.VarChar).Value = obj.CpfRepresentante;
-                    cmd.Parameters.Add("@telefoneRepresentante", SqlDbType.VarChar).Value = obj.TelefoneRepresentante;
-                    cmd.Parameters.Add("@estiloDoLanche", SqlDbType.VarChar).Value = obj.EstiloDoLanche;
-                    cmd.Parameters.Add("@horarioAbertura", SqlDbType.VarChar).Value = obj.HorarioAbertura;
-                    cmd.Parameters.Add("@horarioEnceramento", SqlDbType.VarChar).Value = obj.HorarioEncerramento;
-                    cmd.Parameters.Add("@DescricaoComercio", SqlDbType.VarChar).Value = obj.DescricaoComercio;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -47,6 +79,36 @@ namespace BuskLanche.DataAccess
                 }
             }
         }
+
+        public void Atualizar3(Comercio obj)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"UPDATE CadastroComercio SET
+                                    nomeRepresentante = @nomeRepresentante,
+                                    emailRepresentante = @emailRepresentante,
+                                    senhaRepresentante = @senhaRepresentante,
+                                    cpfRepresentante = @cpfRepresentante,
+                                    telefoneRepresentante = @telefoneRepresentante
+                                 WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.NomeRepresentante;
+                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.EmailRepresentante;
+                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.SenhaRepresentante;
+                    cmd.Parameters.Add("@cpfRepresentante", SqlDbType.VarChar).Value = obj.CpfRepresentante;
+                    cmd.Parameters.Add("@telefoneRepresentante", SqlDbType.VarChar).Value = obj.TelefoneRepresentante;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
 
         public List<Comercio> BuscarTodos()
         {

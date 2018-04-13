@@ -1,4 +1,5 @@
-﻿using BuskLanche.Models;
+﻿using BuskLanche.DataAccess;
+using BuskLanche.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnProximoCad_Click(object sender, EventArgs e)
@@ -21,7 +23,8 @@ namespace BuskLanche.WebUI
             obj.NomeComercio = txtNomeRestaurante.Text;
             obj.Cnpj = txtCNPJ.Text;
 
-            Response.Redirect("CadastroAnunciante2.aspx");
+            var id = new ComercioDAO().Inserir(obj);
+            Response.Redirect(string.Format("CadastroAnunciante2.aspx?id={0}", id));
         }
     }
 }

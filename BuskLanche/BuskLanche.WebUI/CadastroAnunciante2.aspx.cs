@@ -1,4 +1,5 @@
-﻿using BuskLanche.Models;
+﻿using BuskLanche.DataAccess;
+using BuskLanche.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,19 +13,23 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnProximoCad_Click(object sender, EventArgs e)
         {
             var obj = new Comercio();
+            obj.Id = Convert.ToInt32(Request.QueryString["id"]);
             obj.Bairro = txtBairro.Text;
             obj.Cep = txtCEP.Text;
-            obj.Numero = Convert.ToInt32(txtNumero);
+            obj.Numero = Convert.ToInt32(txtNumero.Text);
             obj.Rua = txtRua.Text;
             obj.Complemeneto = txtComplemento.Text;
 
-            Response.Redirect("CadastroAnunciante3.aspx");
+            new ComercioDAO().Atualizar2(obj);
+
+            Response.Redirect(string.Format("CadastroAnunciante3.aspx?id={0}", obj.Id));
         }
     }
 }

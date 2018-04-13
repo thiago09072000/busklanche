@@ -19,8 +19,8 @@ namespace BuskLanche.WebUI
         {
             var obj = new Comercio();
             obj.EstiloDoLanche = txtEstiloLanches.Text;
-            //obj.HorarioAbertura = ;
-            //obj.HorarioEncerramento = ;
+            obj.HorarioAbertura = txtAberto.Text;
+            obj.HorarioEncerramento = txtEncerramento.Text;
             obj.DescricaoComercio = txtDescrevaComercio.Text;
 
             Response.Redirect("Login.aspx");

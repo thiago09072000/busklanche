@@ -20,29 +20,21 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-lg-4">
-                    <asp:Label ID="lblDataNascimento" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Data de nascimento:</asp:Label>
-                    <<asp:TextBox ID="txtDataNascimento" runat="server" TextMode="Date" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
+                <div class="col-lg-12">
+                    <asp:Label ID="Label1" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
                 </div>
-
+            </div>
+            <div class="form-group">
+                <div class="col-lg-4">
+                    <asp:Label ID="lblSenha" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Senha:</asp:Label>
+                    <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" TextMode="Password" style="font-size: x-large" ></asp:TextBox>
+                </div>
                 <div class="col-lg-8">
                     <asp:Label ID="lblCPF" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">CPF:</asp:Label>
                     <asp:TextBox ID="txtCPF" runat="server" CssClass="form-control" style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
-
-            <div class="form-group">
-                <div class="col-lg-8">
-                    <asp:Label ID="lblEmail" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" style="font-size: x-large" ></asp:TextBox>
-                </div>
-
-                <div class="col-lg-4">
-                    <asp:Label ID="lblSenha" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Senha:</asp:Label>
-                    <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" TextMode="Password" style="font-size: x-large" ></asp:TextBox>
-                </div>
-            </div>
-
             <div class="form-group">
                 <div class="col-lg-6">
                     <asp:Label ID="lblcamposObrigatorios" runat="server" CssClass="control-label" style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</asp:Label>
