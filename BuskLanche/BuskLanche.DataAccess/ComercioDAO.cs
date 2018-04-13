@@ -109,6 +109,33 @@ namespace BuskLanche.DataAccess
             }
         }
 
+        public void Atualizar4(Comercio obj)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"UPDATE CadastroComercio SET
+                                    estiloDoLanche = @estiloDoLanche,
+                                    horarioAbertura = @horarioAbertura,
+                                    horarioEnceramento = @horarioEnceramento,
+                                    DescricaoComercio = @DescricaoComercio
+                                 WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@estiloDoLanche", SqlDbType.VarChar).Value = obj.EstiloDoLanche;
+                    cmd.Parameters.Add("@horarioAbertura", SqlDbType.VarChar).Value = obj.HorarioAbertura;
+                    cmd.Parameters.Add("@horarioEnceramento", SqlDbType.VarChar).Value = obj.HorarioEncerramento;
+                    cmd.Parameters.Add("@DescricaoComercio", SqlDbType.VarChar).Value = obj.DescricaoComercio;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
 
         public List<Comercio> BuscarTodos()
         {

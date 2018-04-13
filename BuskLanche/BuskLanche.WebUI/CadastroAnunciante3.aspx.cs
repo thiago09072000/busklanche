@@ -27,7 +27,7 @@ namespace BuskLanche.WebUI
             obj.CpfRepresentante = txtCPF.Text;
             obj.TelefoneRepresentante = txtCelular.Text;
 
-            new ComercioDAO().Atualizar2(obj);
+            new ComercioDAO().Atualizar3(obj);
 
             Response.Redirect(string.Format("CadastroAnunciante4.aspx?id={0}", obj.Id));
         }

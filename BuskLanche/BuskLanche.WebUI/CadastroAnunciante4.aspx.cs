@@ -1,4 +1,5 @@
-﻿using BuskLanche.Models;
+﻿using BuskLanche.DataAccess;
+using BuskLanche.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +13,20 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
             var obj = new Comercio();
+            obj.Id = Convert.ToInt32(Request.QueryString["id"]);
             obj.EstiloDoLanche = txtEstiloLanches.Text;
             obj.HorarioAbertura = txtAberto.Text;
             obj.HorarioEncerramento = txtEncerramento.Text;
             obj.DescricaoComercio = txtDescrevaComercio.Text;
+
+            new ComercioDAO().Atualizar4(obj);
 
             Response.Redirect("Login.aspx");
         }
