@@ -37,7 +37,7 @@
 
                 <div class="col-lg-4">
                     <asp:Label ID="lblSenha" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Senha:</asp:Label>
-                    <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
+                    <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control"  TextMode="Password" Style="font-size: x-large"></asp:TextBox>
                 </div>
             </div>
 
