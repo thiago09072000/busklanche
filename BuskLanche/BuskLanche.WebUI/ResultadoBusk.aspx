@@ -19,7 +19,7 @@
                                     <HeaderStyle Width="30%" />
                                     <ItemStyle Width="30%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
+                                        <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("NomeComercio") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -31,7 +31,7 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Preço">
+                                <%--<asp:TemplateField HeaderText="Preço">
                                     <HeaderStyle Width="15%" />
                                     <ItemStyle Width="15%" />
                                     <ItemTemplate>
@@ -45,7 +45,7 @@
                                     <ItemTemplate>
                                         <asp:Label ID="lblAvaliações" runat="server" Text='<%# Bind("Avaliações") %>'></asp:Label>
                                     </ItemTemplate>
-                                </asp:TemplateField>
+                                </asp:TemplateField>--%>
 
                                 <asp:TemplateField HeaderText="Disponibilidade">
                                     <HeaderStyle Width="20%" />
@@ -54,6 +54,17 @@
                                         <asp:Label ID="lblDisponibilidade" runat="server" Text='<%# Bind("Disponibilidade") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
+                                    <HeaderStyle Width="15%" />
+                                    <ItemStyle Width="15%" />
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btnVisualizar" runat="server" Width="16px" Height="16px" ToolTip="Visualizar" OnClick="btnVisualizar_Click" CommandArgument='<%# Eval("Id") %>'>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
                             </Columns>
                         </asp:GridView>
                     </div>
@@ -61,7 +72,7 @@
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
                         <asp:Button ID="btnVoltar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" OnClick="btnVoltar_Click" />
-                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Selecionar" OnClick="btnSelecionar_Click" />
+                        <%--<asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Selecionar" OnClick="btnSelecionar_Click" />--%>
                     </div>
                 </div>
             </form>

@@ -24,9 +24,16 @@ namespace BuskLanche.WebUI
             Response.Redirect("Default.aspx");
         }
 
-        protected void btnSelecionar_Click(object sender, EventArgs e)
+        protected void btnVisualizar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("exibicaoComercio.aspx");
+            if (!string.IsNullOrWhiteSpace(((LinkButton)sender).CommandArgument))
+            {
+                var id = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+                if (id > 0)
+                {
+                    Response.Redirect("exibicaoComercio.aspx?id=" + id);
+                }
+            }
         }
     }
 }

@@ -41,5 +41,29 @@ namespace BuskLanche.Models
         public string HorarioEncerramento { get; set; }
 
         public string DescricaoComercio { get; set; }
+
+        public string Disponibilidade
+        {
+            get
+            {
+                //Ex.: 06:00 - 18:00
+                return string.Format("{0} - {1}", HorarioAbertura, HorarioEncerramento);
+            }
+        }
+
+        public string Distancia
+        {
+            get
+            {
+                return "2km";
+            }
+        }
+
+        public List<Cardapio> Cardapio { get; set; }
+
+        public Comercio()
+        {
+            this.Cardapio = new List<Models.Cardapio>();
+        }
     }
 }

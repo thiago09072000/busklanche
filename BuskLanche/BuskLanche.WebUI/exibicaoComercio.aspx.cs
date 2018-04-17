@@ -13,7 +13,21 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+                return;
 
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                var obj = new ComercioDAO().BuscarPorId(id);
+                obj.Cardapio = new CardapioDAO().BuscarPorComercio(id);
+
+                //txtCampo1.Text = obj.NomeComercio;
+
+                //grdCardapio.DataSource = obj.Cardapio;
+                //grdCardapio.DataBind(); 
+            }
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

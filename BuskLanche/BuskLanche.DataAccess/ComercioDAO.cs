@@ -136,6 +136,54 @@ namespace BuskLanche.DataAccess
             }
         }
 
+        public Comercio BuscarPorId(int idCadComercio)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM CadastroComercio WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.VarChar).Value = idCadComercio;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var comercio = new Comercio()
+                    {
+                        Id = Convert.ToInt32(row["idCadComercio"]),
+                        Cnpj = row["cnpj"].ToString(),
+                        NomeComercio = row["nomeComercio"].ToString(),
+                        Bairro = row["bairro"].ToString(),
+                        Rua = row["rua"].ToString(),
+                        Numero = Convert.ToInt32(row["numero"]),
+                        Cep = row["cep"].ToString(),
+                        Complemeneto = row["complemento"].ToString(),
+                        NomeRepresentante = row["nomeRepresentante"].ToString(),
+                        EmailRepresentante = row["emailRepresentante"].ToString(),
+                        SenhaRepresentante = row["senhaRepresentante"].ToString(),
+                        CpfRepresentante = row["cpfRepresentante"].ToString(),
+                        TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                        EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                        HorarioAbertura = row["horarioAbertura"].ToString(),
+                        HorarioEncerramento = row["horarioEnceramento"].ToString(),
+                        DescricaoComercio = row["DescricaoComercio"].ToString()
+
+                    };
+
+                    return comercio;
+                }
+            }
+        }
 
         public List<Comercio> BuscarTodos()
         {
@@ -175,8 +223,8 @@ namespace BuskLanche.DataAccess
                             CpfRepresentante = row["cpfRepresentante"].ToString(),
                             TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
                             EstiloDoLanche = row["estiloDoLanche"].ToString(),
-                            //HorarioAbertura
-                            //HorarioEncerramento
+                            HorarioAbertura = row["horarioAbertura"].ToString(),
+                            HorarioEncerramento = row["horarioEnceramento"].ToString(),
                             DescricaoComercio = row["DescricaoComercio"].ToString()
 
                         };
