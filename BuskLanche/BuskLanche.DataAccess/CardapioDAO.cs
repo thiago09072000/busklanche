@@ -23,7 +23,7 @@ namespace BuskLanche.DataAccess
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.IdComercio;
                     cmd.Parameters.Add("@nome", SqlDbType.Int).Value = obj.Nome;
                     cmd.Parameters.Add("@ingrediente", SqlDbType.VarChar).Value = obj.Ingrediente;
-                    cmd.Parameters.Add("@preco", SqlDbType.VarChar).Value = obj.Preco;
+                    cmd.Parameters.Add("@preco", SqlDbType.Decimal).Value = obj.Preco;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
@@ -60,7 +60,7 @@ namespace BuskLanche.DataAccess
                             IdComercio = new Comercio() { Id = Convert.ToInt32(row["idCadComercio"]) },
                             Nome = row["nome"].ToString(),
                             Ingrediente = row["ingrediente"].ToString(),
-                            Preco = row["preco"].ToString()
+                            Preco = Convert.ToDecimal(row["preco"])
                         };
 
                         lstCardapio.Add(Cardapio);
@@ -77,7 +77,7 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
             {
-                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = @idCadComercio;";
+                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = idCadComercio;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -99,7 +99,7 @@ namespace BuskLanche.DataAccess
                             IdComercio = new Comercio() { Id = Convert.ToInt32(row["idCadComercio"]) },
                             Nome = row["nome"].ToString(),
                             Ingrediente = row["ingrediente"].ToString(),
-                            Preco = row["preco"].ToString()
+                            Preco = Convert.ToDecimal(row["preco"])
                         };
 
                         lstCardapio.Add(Cardapio);

@@ -16,7 +16,7 @@ namespace BuskLanche.Models
 
         public string Ingrediente { get; set; }
 
-        public string Preco { get; set; }
+        public decimal Preco { get; set; }
 
     }
 }

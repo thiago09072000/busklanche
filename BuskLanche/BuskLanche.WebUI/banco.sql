@@ -42,7 +42,7 @@ create table CadastroDeCardapio
 	idCadComercio	integer references CadastroComercio,
 	nome			varchar(200),
 	ingrediente		varchar(200),
-	preco			varchar(100)
+	preco			decimal(7, 2)
 )
 
 drop table CadastroDeCardapio

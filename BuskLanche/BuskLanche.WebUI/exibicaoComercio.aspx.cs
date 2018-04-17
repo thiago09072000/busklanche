@@ -25,8 +25,8 @@ namespace BuskLanche.WebUI
 
                 //txtCampo1.Text = obj.NomeComercio;
 
-                //grdCardapio.DataSource = obj.Cardapio;
-                //grdCardapio.DataBind(); 
+                grdCardapio.DataSource = obj.Cardapio;
+                grdCardapio.DataBind(); 
             }
         }
 

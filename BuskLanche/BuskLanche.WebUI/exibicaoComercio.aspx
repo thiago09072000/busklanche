@@ -50,7 +50,7 @@
                                     <HeaderStyle Width="33%" />
                                     <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblNomeCardapio" runat="server" Text='<%# Bind("nome") %>'></asp:Label>
+                                        <asp:Label ID="lblNomeCardapio" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -58,7 +58,7 @@
                                     <HeaderStyle Width="33%" />
                                     <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblIngredientes" runat="server" Text='<%# Bind("ingredientes") %>'></asp:Label>
+                                        <asp:Label ID="lblIngredientes" runat="server" Text='<%# Bind("Ingrediente") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
@@ -66,7 +66,7 @@
                                     <HeaderStyle Width="33%" />
                                     <ItemStyle Width="33%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("preco") %>'></asp:Label>
+                                        <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("Preco") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
