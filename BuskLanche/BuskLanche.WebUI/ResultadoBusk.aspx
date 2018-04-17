@@ -56,8 +56,8 @@
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="5%" />
+                                    <ItemStyle Width="5%" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnVisualizar" runat="server" Width="16px" Height="16px" ToolTip="Visualizar" OnClick="btnVisualizar_Click" CommandArgument='<%# Eval("Id") %>'>
                                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
