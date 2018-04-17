@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,11 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
+            var lst = new ComercioDAO().BuscarTodos();
+            grdComercio.DataSource = lst;
+            grdComercio.DataBind();
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
