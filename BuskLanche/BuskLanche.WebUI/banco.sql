@@ -25,6 +25,12 @@ create table CadastroComercio
 	DescricaoComercio		varchar(max)
 )
 
+insert into CadastroComercio 
+values
+('123456789', 'nomeComercio', 'bairro', 'rua', 134, 'cep', 'complemento', 'nome', 'email', 'senha', 'cpf', 'telefone', 'estiloDoLanche', '22:00', '23:00', 'DescricaoComercio')
+
+select * from CadastroComercio
+
 create table CadastroConsumidor
 (
 	idCadConsumidor		integer primary key identity(1,1),
@@ -34,7 +40,6 @@ create table CadastroConsumidor
 	cpfConsumidor		varchar(15)
 )
 
-drop table CadastroConsumidor
 
 create table CadastroDeCardapio
 (
@@ -45,9 +50,12 @@ create table CadastroDeCardapio
 	preco			decimal(7, 2)
 )
 
-drop table CadastroDeCardapio
+insert into CadastroDeCardapio
+values
+(1, 'nome', 'ingrediente', '24,00')
 
-drop table Avaliacoes
+select * from CadastroDeCardapio
+
 create table Avaliacoes
 (
 	idAvaliacoes	integer primary key identity(1,1),
@@ -56,5 +64,3 @@ create table Avaliacoes
 	avaliacao		integer,
 	comentario		varchar(max)
 )
-
-select * from Avaliacoes
