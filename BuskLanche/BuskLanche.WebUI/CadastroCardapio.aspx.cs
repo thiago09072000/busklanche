@@ -22,7 +22,7 @@ namespace BuskLanche.WebUI
             var obj = new Cardapio();
             obj.Nome = txtNomeLanche.Text;
             obj.Ingrediente = txtIngredientes.Text;
-            obj.Preco = txtPreco.Text;        
+            obj.Preco = Convert.ToDecimal(txtPreco.Text);
             Response.Redirect("GerenciamentoComercio.aspx");
         }
     }
