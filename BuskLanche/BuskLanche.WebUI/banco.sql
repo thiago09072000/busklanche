@@ -52,7 +52,7 @@ create table CadastroDeCardapio
 
 insert into CadastroDeCardapio
 values
-(1, 'nome', 'ingrediente', '24,00')
+(1, 'nome', 'ingrediente', 24.00)
 
 select * from CadastroDeCardapio
 
