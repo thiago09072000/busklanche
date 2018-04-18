@@ -71,5 +71,42 @@ namespace BuskLanche.DataAccess
 
             return (lstConsumidor);
         }
+
+        public Consumidor Logar(string email, string senha)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM CadastroConsumidor WHERE emailConsumidor = @emailConsumidor and senhaConsumidor = @senhaConsumidor;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@emailConsumidor", SqlDbType.VarChar).Value = email;
+                    cmd.Parameters.Add("@senhaConsumidor", SqlDbType.VarChar).Value = senha;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var consumidor = new Consumidor()
+                    {
+                        Id = Convert.ToInt32(row["idCadConsumidor"]),
+                        Nome = row["nomeConsumidor"].ToString(),
+                        Email = row["emailConsumidor"].ToString(),
+                        Senha = row["senhaConsumidor"].ToString(),
+                        Cpf = row["cpfConsumidor"].ToString()
+                    };
+
+                    return consumidor;
+                }
+            }
+        }
     }
 }

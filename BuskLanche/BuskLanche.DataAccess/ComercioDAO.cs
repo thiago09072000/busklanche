@@ -32,9 +32,9 @@ namespace BuskLanche.DataAccess
                     cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
                     cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep ?? string.Empty;
                     cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemeneto ?? string.Empty;
-                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.NomeRepresentante ?? string.Empty;
-                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.EmailRepresentante ?? string.Empty;
-                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.SenhaRepresentante ?? string.Empty;
+                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.Nome ?? string.Empty;
+                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.Email ?? string.Empty;
+                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.Senha ?? string.Empty;
                     cmd.Parameters.Add("@cpfRepresentante", SqlDbType.VarChar).Value = obj.CpfRepresentante ?? string.Empty;
                     cmd.Parameters.Add("@telefoneRepresentante", SqlDbType.VarChar).Value = obj.TelefoneRepresentante ?? string.Empty;
                     cmd.Parameters.Add("@estiloDoLanche", SqlDbType.VarChar).Value = obj.EstiloDoLanche ?? string.Empty;
@@ -95,9 +95,9 @@ namespace BuskLanche.DataAccess
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.NomeRepresentante;
-                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.EmailRepresentante;
-                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.SenhaRepresentante;
+                    cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.Nome;
+                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.Email;
+                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.Senha;
                     cmd.Parameters.Add("@cpfRepresentante", SqlDbType.VarChar).Value = obj.CpfRepresentante;
                     cmd.Parameters.Add("@telefoneRepresentante", SqlDbType.VarChar).Value = obj.TelefoneRepresentante;
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
@@ -168,9 +168,9 @@ namespace BuskLanche.DataAccess
                         Numero = Convert.ToInt32(row["numero"]),
                         Cep = row["cep"].ToString(),
                         Complemeneto = row["complemento"].ToString(),
-                        NomeRepresentante = row["nomeRepresentante"].ToString(),
-                        EmailRepresentante = row["emailRepresentante"].ToString(),
-                        SenhaRepresentante = row["senhaRepresentante"].ToString(),
+                        Nome = row["nomeRepresentante"].ToString(),
+                        Email = row["emailRepresentante"].ToString(),
+                        Senha = row["senhaRepresentante"].ToString(),
                         CpfRepresentante = row["cpfRepresentante"].ToString(),
                         TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
                         EstiloDoLanche = row["estiloDoLanche"].ToString(),
@@ -217,9 +217,9 @@ namespace BuskLanche.DataAccess
                             Numero = Convert.ToInt32(row["numero"]),
                             Cep = row["cep"].ToString(),
                             Complemeneto = row["complemento"].ToString(),
-                            NomeRepresentante = row["nomeRepresentante"].ToString(),
-                            EmailRepresentante = row["emailRepresentante"].ToString(),
-                            SenhaRepresentante = row["senhaRepresentante"].ToString(),
+                            Nome = row["nomeRepresentante"].ToString(),
+                            Email = row["emailRepresentante"].ToString(),
+                            Senha = row["senhaRepresentante"].ToString(),
                             CpfRepresentante = row["cpfRepresentante"].ToString(),
                             TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
                             EstiloDoLanche = row["estiloDoLanche"].ToString(),
@@ -234,6 +234,56 @@ namespace BuskLanche.DataAccess
             }
 
             return (lstComercio);
+        }
+
+        public Comercio Logar(string email, string senha)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                string strSQL = @"SELECT * FROM CadastroComercio WHERE emailRepresentante = @emailRepresentante and senhaRepresentante = @senhaRepresentante;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = email;
+                    cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = senha;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var comercio = new Comercio()
+                    {
+                        Id = Convert.ToInt32(row["idCadComercio"]),
+                        Cnpj = row["cnpj"].ToString(),
+                        NomeComercio = row["nomeComercio"].ToString(),
+                        Bairro = row["bairro"].ToString(),
+                        Rua = row["rua"].ToString(),
+                        Numero = Convert.ToInt32(row["numero"]),
+                        Cep = row["cep"].ToString(),
+                        Complemeneto = row["complemento"].ToString(),
+                        Nome = row["nomeRepresentante"].ToString(),
+                        Email = row["emailRepresentante"].ToString(),
+                        Senha = row["senhaRepresentante"].ToString(),
+                        CpfRepresentante = row["cpfRepresentante"].ToString(),
+                        TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                        EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                        HorarioAbertura = row["horarioAbertura"].ToString(),
+                        HorarioEncerramento = row["horarioEnceramento"].ToString(),
+                        DescricaoComercio = row["DescricaoComercio"].ToString()
+
+                    };
+
+                    return comercio;
+                }
+            }
         }
     }
 }

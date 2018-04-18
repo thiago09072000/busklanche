@@ -275,6 +275,7 @@
     <Compile Include="CadastroCardapio.aspx.designer.cs">
       <DependentUpon>CadastroCardapio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomPrincipalSerializeModel.cs" />
     <Compile Include="DadosCadastrados.aspx.cs">
       <DependentUpon>DadosCadastrados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,6 +304,7 @@
     <Compile Include="exibicaoComercio.aspx.designer.cs">
       <DependentUpon>exibicaoComercio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormsAuthenticationUtil.cs" />
     <Compile Include="GerenciamentoComercio.aspx.cs">
       <DependentUpon>GerenciamentoComercio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

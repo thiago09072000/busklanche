@@ -21,9 +21,9 @@ namespace BuskLanche.WebUI
         {
             var obj = new Comercio();
             obj.Id = Convert.ToInt32(Request.QueryString["id"]);
-            obj.NomeRepresentante = txtNomeCompleto.Text;
-            obj.EmailRepresentante = txtEmail.Text;
-            obj.SenhaRepresentante = txtSenha.Text;
+            obj.Nome = txtNomeCompleto.Text;
+            obj.Email = txtEmail.Text;
+            obj.Senha = txtSenha.Text;
             obj.CpfRepresentante = txtCPF.Text;
             obj.TelefoneRepresentante = txtCelular.Text;
 

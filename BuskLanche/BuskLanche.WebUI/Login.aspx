@@ -26,10 +26,10 @@
                     <asp:Label ID="lblUsuario" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Usuário: </asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <asp:RadioButton ID="TxtAnunciante" GroupName="usuario" Text="Anunciante" runat="server" />
+                    <asp:RadioButton ID="rdoAnunciante" GroupName="usuario" Text="Anunciante" runat="server" />
                 </div>
                 <div class="col-lg-4">
-                    <asp:RadioButton ID="TxtUsuario" GroupName="usuario" Text="Consumidor" runat="server" />
+                    <asp:RadioButton ID="rdoUsuario" GroupName="usuario" Text="Consumidor" runat="server" />
                 </div>
             </div>
             <div class="form-group">
@@ -37,7 +37,6 @@
                     <asp:Button ID="btnLogar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Entrar" OnClick="btnLogar_Click" />
                 </div>
             </div>
-
         </form>
     </div>
 </asp:Content>
