@@ -13,7 +13,8 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
