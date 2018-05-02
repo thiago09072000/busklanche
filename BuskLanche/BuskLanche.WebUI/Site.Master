@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BuskLanche.WebUI.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head runat="server">
     <title>BuskLanche</title>
@@ -23,7 +22,6 @@
     <div class="container">
         <nav class="navbar navbar-default" style="background-color: #FF0000;">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -33,22 +31,15 @@
                     </button>
                     <a class="navbar-brand" href="#" style="color: white; font-weight: 900; font-size: x-large">BUSKLANCHE</a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Login</button>
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Cadastro</button>
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Sobre</button>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container-fluid -->
         </nav>
-        
-
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
-
     </div>
 </body>
 </html>

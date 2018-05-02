@@ -1,12 +1,9 @@
 ﻿using BuskLanche.Models;
-
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
@@ -14,7 +11,7 @@ namespace BuskLanche.DataAccess
     {
         public void Inserir(Avaliacoes obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidao, avaliacao, comentario) VALUES (@idCadComercio, @idCadConsumidao, @avaliacao, @comentario)";
 
@@ -37,7 +34,7 @@ namespace BuskLanche.DataAccess
         {
             var lstAvaliacoes = new List<Avaliacoes>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM Avaliacoes";
 

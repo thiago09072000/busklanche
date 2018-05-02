@@ -1,12 +1,9 @@
 ﻿using BuskLanche.Models;
-
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
@@ -14,7 +11,7 @@ namespace BuskLanche.DataAccess
     {
         public int Inserir(Comercio obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"INSERT INTO CadastroComercio (cnpj, nomeComercio, bairro, rua, numero, cep, complemento, nomeRepresentante, emailRepresentante, senhaRepresentante, 
                                                                   cpfRepresentante, telefoneRepresentante, estiloDoLanche, horarioAbertura, horarioEnceramento, DescricaoComercio) 
@@ -53,7 +50,7 @@ namespace BuskLanche.DataAccess
 
         public void Atualizar2(Comercio obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"UPDATE CadastroComercio SET
                                     bairro = @bairro,
@@ -82,7 +79,7 @@ namespace BuskLanche.DataAccess
 
         public void Atualizar3(Comercio obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"UPDATE CadastroComercio SET
                                     nomeRepresentante = @nomeRepresentante,
@@ -111,7 +108,7 @@ namespace BuskLanche.DataAccess
 
         public void Atualizar4(Comercio obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"UPDATE CadastroComercio SET
                                     estiloDoLanche = @estiloDoLanche,
@@ -138,7 +135,7 @@ namespace BuskLanche.DataAccess
 
         public Comercio BuscarPorId(int idCadComercio)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CadastroComercio WHERE idCadComercio = @idCadComercio;";
 
@@ -189,7 +186,7 @@ namespace BuskLanche.DataAccess
         {
             var lstComercio = new List<Comercio>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CadastroComercio";
 
@@ -238,7 +235,7 @@ namespace BuskLanche.DataAccess
 
         public Comercio Logar(string email, string senha)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CadastroComercio WHERE emailRepresentante = @emailRepresentante and senhaRepresentante = @senhaRepresentante;";
 

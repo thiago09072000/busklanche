@@ -1,11 +1,9 @@
 ﻿using BuskLanche.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BuskLanche.DataAccess
 {
@@ -13,7 +11,7 @@ namespace BuskLanche.DataAccess
     {
         public void Inserir(Cardapio obj)
         {
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"INSERT INTO CadastroDeCardapio (idCadComercio,nome,ingrediente,preco) VALUES (@idCadComercio,@nome,@ingrediente,preco)";
 
@@ -36,7 +34,7 @@ namespace BuskLanche.DataAccess
         {
             var lstCardapio = new List<Cardapio>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CadastroDeCardapio";
 
@@ -75,7 +73,7 @@ namespace BuskLanche.DataAccess
         {
             var lstCardapio = new List<Cardapio>();
 
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=BuskLanche; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = idCadComercio;";
 
