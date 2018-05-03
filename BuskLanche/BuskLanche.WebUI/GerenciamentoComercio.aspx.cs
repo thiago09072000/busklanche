@@ -22,7 +22,7 @@ namespace BuskLanche.WebUI
 
         protected void btnCardápio_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CadastroCardapio.aspx");
+            Response.Redirect("ListagemCardapio.aspx");
         }
 
         protected void btnAvaliações_Click(object sender, EventArgs e)

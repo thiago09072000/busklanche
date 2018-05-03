@@ -171,6 +171,7 @@
     <Content Include="GerenciamentoComercio.aspx" />
     <Content Include="Images\estrela1.jpg" />
     <Content Include="Images\estrela2.jpg" />
+    <Content Include="ListagemCardapio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ResultadoAvaliacao.aspx" />
     <Content Include="ResultadoBusk.aspx" />
@@ -313,6 +314,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListagemCardapio.aspx.cs">
+      <DependentUpon>ListagemCardapio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListagemCardapio.aspx.designer.cs">
+      <DependentUpon>ListagemCardapio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

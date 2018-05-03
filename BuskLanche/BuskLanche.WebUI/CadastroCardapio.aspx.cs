@@ -19,11 +19,16 @@ namespace BuskLanche.WebUI
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            var obj = new Cardapio();
-            obj.Nome = txtNomeLanche.Text;
-            obj.Ingrediente = txtIngredientes.Text;
-            obj.Preco = Convert.ToDecimal(txtPreco.Text);
-            Response.Redirect("GerenciamentoComercio.aspx");
+            //var obj = new Cardapio();
+            //obj.Nome = txtNomeLanche.Text;
+            //obj.Ingrediente = txtIngredientes.Text;
+            //obj.Preco = Convert.ToDecimal(txtPreco.Text);
+            Response.Redirect("ListagemCardapio.aspx");
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListagemCardapio.aspx");
         }
     }
 }
