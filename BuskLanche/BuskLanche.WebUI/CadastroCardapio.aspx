@@ -27,9 +27,9 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-center">
-                        <asp:Button ID="btnInserir" runat="server" Text="Inserir" class="btn btn-danger" Style="font-size: large; margin-top: 100px; margin-right: 100px" />
-                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" class="btn btn-danger" Style="font-size: large; margin-top: 100px; margin-right: 100px" />
-                        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" class="btn btn-danger" Style="font-size: large; margin-top: 100px" />
+                        <asp:Button ID="btnInserir" runat="server" Text="Inserir" class="btn btn-danger" Style="font-size: large; margin-top: 50px; margin-right: 100px" />
+                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" class="btn btn-danger" Style="font-size: large; margin-top: 50px; margin-right: 100px" />
+                        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" class="btn btn-danger" Style="font-size: large; margin-top: 50px" />
                     </div>
                 </div>
                 <div class="form-group">
