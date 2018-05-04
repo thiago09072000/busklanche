@@ -33,7 +33,7 @@ namespace BuskLanche.WebUI
 
                 FormsAuthenticationUtil.SetCustomAuthCookie(usuarioLogado.Email, userData, false);
 
-                Response.Redirect("~/GerenciamentoComercio.aspx");
+                Response.Redirect(string.Format("~/GerenciamentoComercio.aspx?id={0}", usuarioLogado.Id));
             }
             else
             {
