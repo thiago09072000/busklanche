@@ -23,7 +23,11 @@ namespace BuskLanche.WebUI
                 var obj = new ComercioDAO().BuscarPorId(id);
                 obj.Cardapio = new CardapioDAO().BuscarPorComercio(id);
 
-                //txtCampo1.Text = obj.NomeComercio;
+                
+
+                lblTelefone.Text = obj.TelefoneRepresentante;
+                lblHorarioAbe.Text = obj.HorarioAbertura;
+                lblHorarioEm.Text = obj.HorarioEncerramento;
 
                 grdCardapio.DataSource = obj.Cardapio;
                 grdCardapio.DataBind(); 

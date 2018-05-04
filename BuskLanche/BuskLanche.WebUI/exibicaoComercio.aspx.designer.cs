@@ -22,6 +22,15 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
         
         /// <summary>
+        /// lblTel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTel;
+        
+        /// <summary>
         /// lblTelefone control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,40 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblTelefone;
         
         /// <summary>
-        /// lblHorarios control.
+        /// lblHorAbe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHorarios;
+        protected global::System.Web.UI.WebControls.Label lblHorAbe;
+        
+        /// <summary>
+        /// lblHorarioAbe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHorarioAbe;
+        
+        /// <summary>
+        /// lblHorEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHorEm;
+        
+        /// <summary>
+        /// lblHorarioEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHorarioEm;
         
         /// <summary>
         /// grdCardapio control.

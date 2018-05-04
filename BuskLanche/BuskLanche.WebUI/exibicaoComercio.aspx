@@ -13,8 +13,30 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-5">
-                        <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" style="font-size: 20px">Telefone: Telefone do Comercio</asp:Label>
-                        <asp:Label ID="lblHorarios" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 5px">Horario de Funcionamento</asp:Label>
+                        <div class="for-group">
+                            <div class="col-lg-5">
+                                <asp:Label ID="lblTel" runat="server" CssClass="control-label" style="font-size: 20px">Telefone:</asp:Label>
+                            </div>
+                            <div class="col-lg-7">
+                                <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="for-group">
+                            <div class="col-lg-7">
+                                <asp:Label ID="lblHorAbe" runat="server" CssClass="control-label" style="font-size: 20px">Horario abertura:</asp:Label>
+                            </div>
+                            <div class="col-lg-5">
+                                <asp:Label ID="lblHorarioAbe" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="for-group">
+                            <div class="col-lg-7">
+                                <asp:Label ID="lblHorEm" runat="server" CssClass="control-label" style="font-size: 20px">Horario Enceramento:</asp:Label>
+                            </div>
+                            <div class="col-lg-5">
+                                <asp:Label ID="lblHorarioEm" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-7 text-center">
                         <table>
