@@ -22,8 +22,8 @@ namespace BuskLanche.WebUI
                 var obj = new ComercioDAO().BuscarPorId(id);
 
                 //preencher os campos nome do comércio e nome do representado
-                //lblNomeComercio.Text = obj.NomeComercio;
-                //lblNomeRepresentante.Text = obj.NomeRepresentante;
+                lblNomeRepresentante.Text = obj.Nome;
+                lblNomeComercio.Text = obj.NomeComercio;
             }
         }
 

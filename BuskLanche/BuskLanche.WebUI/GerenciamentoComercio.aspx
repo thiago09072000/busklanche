@@ -8,7 +8,7 @@
                     <asp:Label ID="lblComercio" runat="server" CssClass="control-label" style="font-size: 40px; margin-left: 20px; color: red">Comercío:</asp:Label>
                 </div>
                 <div class="col-md-9">
-                    <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px">NomeComercío</asp:Label>
+                    <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px"></asp:Label>
                 </div>
             </div>
 
@@ -17,7 +17,7 @@
                     <asp:Label ID="lblRepresentante" runat="server" CssClass="control-label" style="font-size: 40px; margin-left: 20px; color: red">Representante:</asp:Label>
                 </div>
                 <div class="col-md-8">
-                    <asp:Label ID="lblNomeRepresentante" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px">NomeRepresentante</asp:Label>
+                    <asp:Label ID="lblNomeRepresentante" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px"></asp:Label>
                 </div>
             </div>
 
