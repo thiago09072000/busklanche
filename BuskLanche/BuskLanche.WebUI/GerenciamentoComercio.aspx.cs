@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,21 +14,56 @@ namespace BuskLanche.WebUI
         {
             if (IsPostBack)
                 return;
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                var obj = new ComercioDAO().BuscarPorId(id);
+
+                //preencher os campos nome do comércio e nome do representado
+                //lblNomeComercio.Text = obj.NomeComercio;
+                //lblNomeRepresentante.Text = obj.NomeRepresentante;
+            }
         }
 
         protected void btnDados_Click(object sender, EventArgs e)
         {
-            Response.Redirect("DadosCadastrados.aspx");
+            //verifica se existe o id do comércio na url do navegador
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                //se existir, converte para inteiro
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                //redireciona para a pagina desejada, passando o id do comercio por parametro
+                Response.Redirect(string.Format("DadosCadastrados.aspx?id={0}", id));
+            }
         }
 
         protected void btnCardápio_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ListagemCardapio.aspx");
+            //verifica se existe o id do comércio na url do navegador
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                //se existir, converte para inteiro
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                //redireciona para a pagina desejada, passando o id do comercio por parametro
+                Response.Redirect(string.Format("ListagemCardapio.aspx?id={0}", id));
+            }
         }
 
         protected void btnAvaliações_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ResultadoAvaliacao.aspx");
+            //verifica se existe o id do comércio na url do navegador
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                //se existir, converte para inteiro
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                //redireciona para a pagina desejada, passando o id do comercio por parametro
+                Response.Redirect(string.Format("ResultadoAvaliacao.aspx?id={0}", id));
+            }
         }
     }
 }
