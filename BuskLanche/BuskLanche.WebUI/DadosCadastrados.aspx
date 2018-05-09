@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-lg-2">
                     <asp:Label ID="lblAberto" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 25px">Aberto das:</asp:Label>
-                    <asp:TextBox ID="TextAberto" runat="server" TextMode="Time" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
+                    <asp:TextBox ID="txtAberto" runat="server" TextMode="Time" CssClass="form-control" Style="font-size: x-large"></asp:TextBox>
                 </div>
                 <div class="col-lg-2">
                     <asp:Label ID="lblEncarramento" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 25px">Encerramento:</asp:Label>
