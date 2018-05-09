@@ -14,13 +14,12 @@ namespace BuskLanche.WebUI
             if (IsPostBack)
                 return;
         }
-
-        protected void btnConsumidor_Click(object sender, EventArgs e)
+        protected void btnConsumidor_Click1(object sender, EventArgs e)
         {
             Response.Redirect("CadastroConsumidor.aspx");
         }
 
-        protected void BtnAnunciante_Click(object sender, EventArgs e)
+        protected void BbtnAnunciante_Click(object sender, EventArgs e)
         {
             Response.Redirect("CadastroAnunciante1.aspx");
         }
