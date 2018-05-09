@@ -22,6 +22,15 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
         
         /// <summary>
+        /// lblNomeComercio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNomeComercio;
+        
+        /// <summary>
         /// lblTel control.
         /// </summary>
         /// <remarks>
@@ -40,40 +49,22 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblTelefone;
         
         /// <summary>
-        /// lblHorAbe control.
+        /// lblDispo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHorAbe;
+        protected global::System.Web.UI.WebControls.Label lblDispo;
         
         /// <summary>
-        /// lblHorarioAbe control.
+        /// lblDisponibilidade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHorarioAbe;
-        
-        /// <summary>
-        /// lblHorEm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHorEm;
-        
-        /// <summary>
-        /// lblHorarioEm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHorarioEm;
+        protected global::System.Web.UI.WebControls.Label lblDisponibilidade;
         
         /// <summary>
         /// grdCardapio control.
@@ -85,21 +76,21 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.GridView grdCardapio;
         
         /// <summary>
-        /// btnVoltar control.
+        /// btnAvaliar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVoltar;
+        protected global::System.Web.UI.WebControls.Button btnAvaliar;
         
         /// <summary>
-        /// btnSelecionar control.
+        /// btnFechar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSelecionar;
+        protected global::System.Web.UI.WebControls.Button btnFechar;
     }
 }

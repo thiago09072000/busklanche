@@ -7,7 +7,7 @@
             <form id="Form2" runat="server" class="form-horizontal">
                 <div class="form-group">
                     <div class="col-lg-12">
-                        <h1 style="font-weight: bold; color: red; font-size: 35px">NomeDoComércio</h1>
+                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-weight: bold; color: red; font-size: 35px"></asp:Label>
                         <hr />
                     </div>
                 </div>
@@ -23,18 +23,10 @@
                         </div>
                         <div class="for-group">
                             <div class="col-lg-7">
-                                <asp:Label ID="lblHorAbe" runat="server" CssClass="control-label" style="font-size: 20px">Horario abertura:</asp:Label>
+                                <asp:Label ID="lblDispo" runat="server" CssClass="control-label" style="font-size: 20px">Disponibilidade:</asp:Label>
                             </div>
                             <div class="col-lg-5">
-                                <asp:Label ID="lblHorarioAbe" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="for-group">
-                            <div class="col-lg-7">
-                                <asp:Label ID="lblHorEm" runat="server" CssClass="control-label" style="font-size: 20px">Horario Enceramento:</asp:Label>
-                            </div>
-                            <div class="col-lg-5">
-                                <asp:Label ID="lblHorarioEm" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                                <asp:Label ID="lblDisponibilidade" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -97,8 +89,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
-                        <asp:Button ID="btnVoltar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Avaliar e Comentar" OnClick="btnVoltar_Click" />
-                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Fechar" OnClick="btnSelecionar_Click" />
+                        <asp:Button ID="btnAvaliar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Avaliar e Comentar" OnClick="btnAvaliar_Click" />
+                        <asp:Button ID="btnFechar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Fechar" OnClick="btnFechar_Click" />
                     </div>
                 </div>
             </form>

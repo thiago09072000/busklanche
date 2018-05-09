@@ -23,25 +23,23 @@ namespace BuskLanche.WebUI
                 var obj = new ComercioDAO().BuscarPorId(id);
                 obj.Cardapio = new CardapioDAO().BuscarPorComercio(id);
 
-                
-
+                lblNomeComercio.Text = obj.NomeComercio;
                 lblTelefone.Text = obj.TelefoneRepresentante;
-                lblHorarioAbe.Text = obj.HorarioAbertura;
-                lblHorarioEm.Text = obj.HorarioEncerramento;
+                lblDisponibilidade.Text = obj.Disponibilidade;
 
                 grdCardapio.DataSource = obj.Cardapio;
                 grdCardapio.DataBind(); 
             }
         }
 
-        protected void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Avaliacao.aspx");
-        }
-
-        protected void btnSelecionar_Click(object sender, EventArgs e)
+        protected void btnFechar_Click(object sender, EventArgs e)
         {
             Response.Redirect("ResultadoBusk.aspx");
+        }
+
+        protected void btnAvaliar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Avaliacao.aspx");
         }
     }
 }

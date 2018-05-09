@@ -33,7 +33,6 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Login</button>
-                    <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Cadastro</button>
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px">Sobre</button>
                 </div>
             </div>

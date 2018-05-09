@@ -30,22 +30,6 @@ namespace BuskLanche.DataAccess
             }
         }
 
-        public void Alterar(Cardapio obj)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-                string strSQL = @"";
-            }
-        }
-
-        public void Excluir(Cardapio obj)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-
-            }
-        }
-
         public List<Cardapio> BuscarTodos()
         {
             var lstCardapio = new List<Cardapio>();

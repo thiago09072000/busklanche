@@ -51,5 +51,10 @@ namespace BuskLanche.WebUI
                 Response.Redirect("~/Default.aspx");
             }
         }
+
+        protected void btnCadastro_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EscolhaCadastro.aspx");
+        }
     }
 }
