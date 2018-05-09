@@ -11,12 +11,20 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CadastroCardapio.aspx");
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                //se existir, converte para inteiro
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                //redireciona para a pagina desejada, passando o id do comercio por parametro
+                Response.Redirect(string.Format("CadastroCardapio.aspx?id={0}", id));
+            }
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
