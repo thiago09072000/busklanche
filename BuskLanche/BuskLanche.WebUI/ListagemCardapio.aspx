@@ -13,11 +13,11 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-left">
-                        <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" class="btn btn-danger" Style="font-size: large; margin-top: 25px" OnClick="btnCadastrar_Click"/>
-                        <asp:Button ID="btnVoltar" runat="server" Text="Voltar" class="btn btn-danger" Style="font-size: large; margin-top: 25px" OnClick="btnVoltar_Click"/>
+                        <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" class="btn btn-danger" Style="font-size: large; margin-top: 25px" OnClick="btnCadastrar_Click" />
+                        <asp:Button ID="btnVoltar" runat="server" Text="Voltar" class="btn btn-danger" Style="font-size: large; margin-top: 25px" OnClick="btnVoltar_Click" />
                     </div>
                     <div class="col-lg-12">
-                        <asp:GridView ID="grdComercio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
+                        <asp:GridView ID="grdCardapio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                             <Columns>
                                 <asp:TemplateField HeaderText="Nome">
                                     <HeaderStyle Width="30%" />
@@ -40,6 +40,22 @@
                                     <ItemStyle Width="15%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("Preco") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
+                                    <HeaderStyle Width="15%" />
+                                    <ItemStyle Width="15%" />
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btnEditar" runat="server" Width="16px" Height="16px"
+                                            ToolTip="Editar" OnClick="btnEditar_Click" CommandArgument='<%# Eval("Id") %>'>
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="btnExcluir" runat="server" Width="16px" Height="16px"
+                                            ToolTip="Excluir" OnClick="btnExcluir_Click" CommandArgument='<%# Eval("Id") %>'
+                                            OnClientClick='if (!confirm("Deseja realmente remover este registro?")) return false;'>
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

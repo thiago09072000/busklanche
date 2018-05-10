@@ -133,6 +133,24 @@ namespace BuskLanche.DataAccess
             }
         }
 
+        public void Excluir(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"DELETE FROM CadastroComercio WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = id;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
         public Comercio BuscarPorId(int idCadComercio)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))

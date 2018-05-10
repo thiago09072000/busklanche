@@ -17,6 +17,7 @@
     <link href="<%= ResolveUrl("~/Content/estilos.css") %>" rel="stylesheet" />
     <script src="<%= ResolveUrl("~/Scripts/jquery-1.9.1.js") %>"></script>
     <script src="<%= ResolveUrl("~/Scripts/bootstrap.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/meiomask.js") %>"></script>
 </head>
 <body>
     <div class="container">

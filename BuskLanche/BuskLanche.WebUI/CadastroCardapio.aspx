@@ -4,7 +4,8 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form id="Form2" runat="server" class="form-horizontal">
+            <form runat="server" class="form-horizontal">
+                <asp:HiddenField ID="hdfIdComercio" runat="server" Value="0" />
                 <div class="form-group">
                     <div class="col-lg-12 text-center">
                         <h1 style="font-weight: bold; color: red; font-size: 50px">Cardápio</h1>

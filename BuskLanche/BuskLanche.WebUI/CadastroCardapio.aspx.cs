@@ -15,20 +15,49 @@ namespace BuskLanche.WebUI
         {
             if (IsPostBack)
                 return;
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+                var cardapio = new CardapioDAO().BuscarPorId(id);
+
+                if (cardapio != null)
+                {
+                    txtNomeLanche.Text = cardapio.Nome;
+                    txtIngredientes.Text = cardapio.Ingrediente;
+                    txtPreco.Text = string.Format("{0:N2}", cardapio.Preco);
+                    hdfIdComercio.Value = cardapio.Comercio.Id.ToString();
+                }
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            //var obj = new Cardapio();
-            //obj.Nome = txtNomeLanche.Text;
-            //obj.Ingrediente = txtIngredientes.Text;
-            //obj.Preco = Convert.ToDecimal(txtPreco.Text);
-            Response.Redirect("ListagemCardapio.aspx");
+            var obj = new Cardapio();
+            obj.Id = string.IsNullOrWhiteSpace(Request.QueryString["id"]) ? 0 : Convert.ToInt32(Request.QueryString["id"]);
+            obj.Nome = txtNomeLanche.Text;
+            obj.Ingrediente = txtIngredientes.Text;
+            obj.Preco = !string.IsNullOrWhiteSpace(txtPreco.Text) ? Convert.ToDecimal(txtPreco.Text) : decimal.Zero;
+
+            //pegando valor do id do comercio da url do navegador e vinculando ao objeto cardápio
+            var idComercio = Convert.ToInt32(Request.QueryString["idComercio"]);
+            obj.Comercio = new Comercio() { Id = idComercio };
+
+            if (obj != null && obj.Id > 0)
+                new CardapioDAO().Atualizar(obj);
+            else
+                new CardapioDAO().Inserir(obj);
+
+            Response.Redirect(string.Format("ListagemCardapio.aspx?id={0}", obj.Comercio.Id));
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ListagemCardapio.aspx");
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["idComercio"]))
+            {
+                var idComercio = Convert.ToInt32(Request.QueryString["idComercio"]);
+                Response.Redirect(string.Format("ListagemCardapio.aspx?id={0}", idComercio));
+            }
         }
     }
 }

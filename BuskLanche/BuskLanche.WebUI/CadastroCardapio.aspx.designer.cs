@@ -13,13 +13,13 @@ namespace BuskLanche.WebUI {
     public partial class CadastroCardapio {
         
         /// <summary>
-        /// Form2 control.
+        /// hdfIdComercio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
+        protected global::System.Web.UI.WebControls.HiddenField hdfIdComercio;
         
         /// <summary>
         /// lblNomeLanche control.
