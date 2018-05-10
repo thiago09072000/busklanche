@@ -59,5 +59,10 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MainContent_txtCEP").setMask("cep");
+        });
+    </script>
 
 </asp:Content>
