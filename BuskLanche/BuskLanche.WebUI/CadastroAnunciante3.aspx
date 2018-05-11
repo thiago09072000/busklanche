@@ -71,6 +71,10 @@
             $("#MainContent_txtCPF").setMask("cpf");
         });
     </script>
-    
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MainContent_txtCelular").setMask("phone");
+        });
+    </script>
 
 </asp:Content>

@@ -42,4 +42,10 @@
         </form>
     </div>
 
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MainContent_txtInfCEP").setMask("cep");
+        });
+    </script>
+
 </asp:Content>
