@@ -83,6 +83,11 @@
                     <asp:TextBox ID="txtDescricao" runat="server" TextMode="Multiline" CssClass="form-control" Rows="5"></asp:TextBox>
                 </div>
             </div>
+                <div class="form-group">
+                <div class="col-lg-6">
+                    <asp:Label ID="lbAlteraDados" runat="server" CssClass="control-label" Style="color: red; margin-top: 100px">*Todos os campos podem ser alterados</asp:Label>
+                </div>
+            </div>
 
             <div class="form-group">
                 <div class="col-lg-12 text-right">
