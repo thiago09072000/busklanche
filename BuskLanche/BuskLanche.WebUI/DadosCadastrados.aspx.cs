@@ -53,10 +53,11 @@ namespace BuskLanche.WebUI
             obj.EstiloDoLanche = txtEstiloLanche.Text;
             obj.HorarioAbertura = txtAberto.Text;
             obj.HorarioEncerramento = txtEncarramento.Text;
+            obj.DescricaoComercio = txtDescricao.Text;
 
             new ComercioDAO().AlterarDados(obj);
 
-            Response.Redirect("GerenciamentoComercio.aspx");
+            Response.Redirect(string.Format("GerenciamentoComercio.aspx?id={0}", obj.Id));
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

@@ -139,12 +139,12 @@ namespace BuskLanche.DataAccess
             {
                 string strSQL = @"UPDATE CadastroComercio SET
                                     nomeComercio = @nomeComercio,
-                                    cnpj = @ cnpj,
+                                    cnpj = @cnpj,
                                     bairro = @bairro,
                                     rua = @rua,
                                     numero = @numero,
                                     cep = @cep,
-                                    complemento = @complemento
+                                    complemento = @complemento,
                                     estiloDoLanche = @estiloDoLanche,
                                     horarioAbertura = @horarioAbertura,
                                     horarioEnceramento = @horarioEnceramento,
@@ -155,8 +155,8 @@ namespace BuskLanche.DataAccess
                 {
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
-                    cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = obj.Cnpj;
                     cmd.Parameters.Add("@nomeComercio", SqlDbType.VarChar).Value = obj.NomeComercio;
+                    cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = obj.Cnpj;
                     cmd.Parameters.Add("@bairro", SqlDbType.VarChar).Value = obj.Bairro;
                     cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua;
                     cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
