@@ -25,7 +25,7 @@ namespace BuskLanche.WebUI
             obj.Cep = txtCEP.Text;
             obj.Numero = Convert.ToInt32(txtNumero.Text);
             obj.Rua = txtRua.Text;
-            obj.Complemeneto = txtComplemento.Text;
+            obj.Complemento = txtComplemento.Text;
 
             new ComercioDAO().Atualizar2(obj);
 

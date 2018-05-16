@@ -20,7 +20,7 @@ namespace BuskLanche.Models
 
         public string Cep { get; set; }
 
-        public string Complemeneto { get; set; }
+        public string Complemento { get; set; }
 
         public string CpfRepresentante { get; set; }
 

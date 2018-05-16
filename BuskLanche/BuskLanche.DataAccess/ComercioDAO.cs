@@ -28,7 +28,7 @@ namespace BuskLanche.DataAccess
                     cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua ?? string.Empty;
                     cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
                     cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep ?? string.Empty;
-                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemeneto ?? string.Empty;
+                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemento ?? string.Empty;
                     cmd.Parameters.Add("@nomeRepresentante", SqlDbType.VarChar).Value = obj.Nome ?? string.Empty;
                     cmd.Parameters.Add("@emailRepresentante", SqlDbType.VarChar).Value = obj.Email ?? string.Empty;
                     cmd.Parameters.Add("@senhaRepresentante", SqlDbType.VarChar).Value = obj.Senha ?? string.Empty;
@@ -67,7 +67,7 @@ namespace BuskLanche.DataAccess
                     cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua;
                     cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
                     cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep;
-                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemeneto;
+                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemento;
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
 
                     conn.Open();
@@ -133,6 +133,47 @@ namespace BuskLanche.DataAccess
             }
         }
 
+        public void AlterarDados(Comercio obj)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"UPDATE CadastroComercio SET
+                                    nomeComercio = @nomeComercio,
+                                    cnpj = @ cnpj,
+                                    bairro = @bairro,
+                                    rua = @rua,
+                                    numero = @numero,
+                                    cep = @cep,
+                                    complemento = @complemento
+                                    estiloDoLanche = @estiloDoLanche,
+                                    horarioAbertura = @horarioAbertura,
+                                    horarioEnceramento = @horarioEnceramento,
+                                    DescricaoComercio = @DescricaoComercio
+                                 WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Id;
+                    cmd.Parameters.Add("@cnpj", SqlDbType.VarChar).Value = obj.Cnpj;
+                    cmd.Parameters.Add("@nomeComercio", SqlDbType.VarChar).Value = obj.NomeComercio;
+                    cmd.Parameters.Add("@bairro", SqlDbType.VarChar).Value = obj.Bairro;
+                    cmd.Parameters.Add("@rua", SqlDbType.VarChar).Value = obj.Rua;
+                    cmd.Parameters.Add("@numero", SqlDbType.Int).Value = obj.Numero;
+                    cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = obj.Cep;
+                    cmd.Parameters.Add("@complemento", SqlDbType.VarChar).Value = obj.Complemento;
+                    cmd.Parameters.Add("@estiloDoLanche", SqlDbType.VarChar).Value = obj.EstiloDoLanche;
+                    cmd.Parameters.Add("@horarioAbertura", SqlDbType.VarChar).Value = obj.HorarioAbertura;
+                    cmd.Parameters.Add("@horarioEnceramento", SqlDbType.VarChar).Value = obj.HorarioEncerramento;
+                    cmd.Parameters.Add("@DescricaoComercio", SqlDbType.VarChar).Value = obj.DescricaoComercio;
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
         public void Excluir(int id)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
@@ -182,7 +223,7 @@ namespace BuskLanche.DataAccess
                         Rua = row["rua"].ToString(),
                         Numero = Convert.ToInt32(row["numero"]),
                         Cep = row["cep"].ToString(),
-                        Complemeneto = row["complemento"].ToString(),
+                        Complemento = row["complemento"].ToString(),
                         Nome = row["nomeRepresentante"].ToString(),
                         Email = row["emailRepresentante"].ToString(),
                         Senha = row["senhaRepresentante"].ToString(),
@@ -231,7 +272,7 @@ namespace BuskLanche.DataAccess
                             Rua = row["rua"].ToString(),
                             Numero = Convert.ToInt32(row["numero"]),
                             Cep = row["cep"].ToString(),
-                            Complemeneto = row["complemento"].ToString(),
+                            Complemento = row["complemento"].ToString(),
                             Nome = row["nomeRepresentante"].ToString(),
                             Email = row["emailRepresentante"].ToString(),
                             Senha = row["senhaRepresentante"].ToString(),
@@ -283,7 +324,7 @@ namespace BuskLanche.DataAccess
                         Rua = row["rua"].ToString(),
                         Numero = Convert.ToInt32(row["numero"]),
                         Cep = row["cep"].ToString(),
-                        Complemeneto = row["complemento"].ToString(),
+                        Complemento = row["complemento"].ToString(),
                         Nome = row["nomeRepresentante"].ToString(),
                         Email = row["emailRepresentante"].ToString(),
                         Senha = row["senhaRepresentante"].ToString(),

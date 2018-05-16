@@ -1,4 +1,5 @@
 ﻿using BuskLanche.DataAccess;
+using BuskLanche.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace BuskLanche.WebUI
                 txtRua.Text = obj.Rua;
                 txtNumero.Text = Convert.ToString(obj.Numero);
                 txtCEP.Text = obj.Cep;
-                txtComplemento.Text = obj.Complemeneto;
+                txtComplemento.Text = obj.Complemento;
                 txtEstiloLanche.Text = obj.EstiloDoLanche;
                 txtAberto.Text = obj.HorarioAbertura;
                 txtEncarramento.Text = obj.HorarioEncerramento;
@@ -39,6 +40,26 @@ namespace BuskLanche.WebUI
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+            var obj = new Comercio();
+            obj.Id = string.IsNullOrWhiteSpace(Request.QueryString["id"]) ? 0 : Convert.ToInt32(Request.QueryString["id"]);
+            obj.NomeComercio = txtNomeRestaurante.Text;
+            obj.Cnpj = txtCNPJ.Text;
+            obj.Bairro = txtBairro.Text;
+            obj.Rua = txtRua.Text;
+            obj.Numero = Convert.ToInt32(txtNumero.Text);
+            obj.Cep = txtCEP.Text;
+            obj.Complemento = txtComplemento.Text;
+            obj.EstiloDoLanche = txtEstiloLanche.Text;
+            obj.HorarioAbertura = txtAberto.Text;
+            obj.HorarioEncerramento = txtEncarramento.Text;
+
+            new ComercioDAO().AlterarDados(obj);
+
+            Response.Redirect("GerenciamentoComercio.aspx");
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
         {
             Response.Redirect("GerenciamentoComercio.aspx");
         }
