@@ -39,7 +39,8 @@ namespace BuskLanche.WebUI
 
         protected void btnAvaliar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Avaliacao.aspx");
+            var idComercio = Convert.ToInt32(Request.QueryString["id"]);
+            Response.Redirect(string.Format("Avaliacao.aspx?id={0}", idComercio));
         }
     }
 }

@@ -17,7 +17,8 @@ namespace BuskLanche.WebUI
 
         protected void btnSelecionar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("exibicaoComercio.aspx");
+            var idComercio = Convert.ToInt32(Request.QueryString["id"]);
+            Response.Redirect(string.Format("exibicaoComercio.aspx?id={0}", idComercio));
         }
     }
 }
