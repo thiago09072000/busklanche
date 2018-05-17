@@ -10,7 +10,7 @@
                         <asp:Label ID="lblAvaliacaoSobre" runat="server" CssClass="control-label" Style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</asp:Label>
                     </div>
                     <div class="col-md-9">
-                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 10px">Nome do Comércio</asp:Label>
+                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-size: 30px; margin-top: 10px">Nome do Comércio</asp:Label>
                     </div>
                 </div>
                 <div class="form-group">
