@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,16 @@ namespace BuskLanche.WebUI
         {
             if (IsPostBack)
                 return;
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            {
+                var id = Convert.ToInt32(Request.QueryString["id"]);
+
+                var obj = new ComercioDAO().BuscarPorId(id);
+
+                lblNomeComercio.Text = obj.NomeComercio;
+
+            }
         }
 
         protected void btnSelecionar_Click(object sender, EventArgs e)
