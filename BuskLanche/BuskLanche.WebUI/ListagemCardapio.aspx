@@ -28,24 +28,24 @@
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="Ingrediente">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="40%" />
+                                    <ItemStyle Width="40%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblIngrediente" runat="server" Text='<%# Bind("Ingrediente") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="Preço">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="20%" />
+                                    <ItemStyle Width="20%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("Preco") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="10%" />
+                                    <ItemStyle Width="10%" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnEditar" runat="server" Width="16px" Height="16px"
                                             ToolTip="Editar" OnClick="btnEditar_Click" CommandArgument='<%# Eval("Id") %>'>
