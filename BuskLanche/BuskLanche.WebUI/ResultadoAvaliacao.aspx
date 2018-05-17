@@ -7,12 +7,36 @@
             <form id="Form2" runat="server" class="form-horizontal">
                 <div class="form-group">
                     <div class="col-md-3">
-                        <asp:Label ID="lblAvalSobre" runat="server" CssClass="control-label" style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</asp:Label>
+                        <asp:Label ID="lblAvalSobre" runat="server" CssClass="control-label" Style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</asp:Label>
                         <hr />
                     </div>
                     <div class="col-md-9">
-                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 7px">Nome do Comércio</asp:Label>
+                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 7px">Nome do Comércio</asp:Label>
                         <hr />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <label class="control-label" style="font-size: x-large; margin-top: 50px">Média de avaliações:</label>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="form-group">
@@ -44,32 +68,6 @@
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-lg-12">
-                        <label class="control-label" style="font-size: x-large; margin-top: 50px">Média de avaliações:</label>
-                        <table>
-                            <tr>
-                                <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                                <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
-                                </td>
-                            </tr>
-                        </table>
                     </div>
                 </div>
                 <div class="form-group">
