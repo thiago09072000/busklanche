@@ -19,4 +19,3 @@ namespace BuskLanche.Models
         public decimal Preco { get; set; }
     }
 }
-
