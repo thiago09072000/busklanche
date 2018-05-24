@@ -20,7 +20,7 @@ namespace BuskLanche.DataAccess
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.IdComercio;
                     cmd.Parameters.Add("@idCadConsumidor", SqlDbType.Int).Value = obj.IdConsumidor;
-                    cmd.Parameters.Add("@avaliacao", SqlDbType.VarChar).Value = obj.Avalicacao;
+                    cmd.Parameters.Add("@avaliacao", SqlDbType.VarChar).Value = obj.Avaliacao;
                     cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = obj.Comentario;
                     cmd.Parameters.Add("@dataHora", SqlDbType.DateTime).Value = obj.DataHora;
 
@@ -66,7 +66,7 @@ namespace BuskLanche.DataAccess
                                 Id = Convert.ToInt32(row["idCadConsumidor"]),
                                 Nome = row["nomeConsumidor"].ToString()
                             },
-                            Avalicacao = row["avaliacao"].ToString(),
+                            Avaliacao = row["avaliacao"].ToString(),
                             Comentario = row["comentario"].ToString()
                         };
                         lstAvaliacoes.Add(Avaliacoes);
@@ -113,7 +113,7 @@ namespace BuskLanche.DataAccess
                                 Id = Convert.ToInt32(row["idCadConsumidor"]),
                                 Nome = row["nomeConsumidor"].ToString()
                             },
-                            Avalicacao = row["avaliacao"].ToString(),
+                            Avaliacao = row["avaliacao"].ToString(),
                             Comentario = row["comentario"].ToString()
                     };
                         lstAvaliacoes.Add(Avaliacoes);
