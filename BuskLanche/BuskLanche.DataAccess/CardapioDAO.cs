@@ -151,7 +151,7 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = idCadComercio;";
+                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = @idCadComercio;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
