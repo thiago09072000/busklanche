@@ -13,7 +13,7 @@ namespace BuskLanche.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario) VALUES (@idCadComercio, @idCadConsumidor, @avaliacao, @comentario)";
+                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario, dataHora) VALUES (@idCadComercio, @idCadConsumidor, @avaliacao, @comentario, @dataHora)";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -22,6 +22,7 @@ namespace BuskLanche.DataAccess
                     cmd.Parameters.Add("@idCadConsumidor", SqlDbType.Int).Value = obj.IdConsumidor;
                     cmd.Parameters.Add("@avaliacao", SqlDbType.VarChar).Value = obj.Avalicacao;
                     cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = obj.Comentario;
+                    cmd.Parameters.Add("@dataHora", SqlDbType.DateTime).Value = obj.DataHora;
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
