@@ -50,7 +50,7 @@ create table CadastroDeCardapio
 	preco			decimal(7, 2)
 )
 
-insert into CadastroDeCardapio
+insert into CadastroDeCardapio 
 values
 (1, 'nome', 'ingrediente', 24.00)
 
@@ -62,5 +62,8 @@ create table Avaliacoes
 	idCadComercio	integer references		CadastroComercio,
 	idCadConsumidor	integer references      CadastroConsumidor,
 	avaliacao		integer,
-	comentario		varchar(max)
+	comentario		varchar(max),
+	dataHora		datetime not null default getdate()
 )
+
+select * from CadastroDeCardapio
