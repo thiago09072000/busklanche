@@ -14,7 +14,7 @@ namespace BuskLanche.Models
 
         public Consumidor IdConsumidor { get; set; }
 
-        public string Avalicacao { get; set; }
+        public string Avaliacao { get; set; }
 
         public string Comentario { get; set; }
 
