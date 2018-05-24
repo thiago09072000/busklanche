@@ -16,6 +16,8 @@ namespace BuskLanche.Models
 
         public string Avalicacao { get; set; }
 
-        public string Comertario { get; set; }
+        public string Comentario { get; set; }
+
+        public DateTime DataHora { get; set; }
     }
 }
