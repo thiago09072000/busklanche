@@ -47,36 +47,38 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-lg-12">
-                        <asp:GridView ID="grdComercio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
-                            <Columns>
-                                <asp:TemplateField HeaderText="Nome">
-                                    <HeaderStyle Width="30%" />
-                                    <ItemStyle Width="30%" />
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("Nome") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
-                                <asp:TemplateField HeaderText="Comentário">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblComentário" runat="server" Text='<%# Bind("Comentario") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
-                                <asp:TemplateField HeaderText="Avaliação">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblAvaliação" runat="server" Text='<%# Bind("Avaliacao") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
+                    <div class="col-md-12">
+                        <asp:DataList ID="gridView" CssClass="table text-center" runat="server" RepeatColumns="1" RepeatLayout="Table">
+                            <ItemTemplate>
+                                <div class="form-group">
+                                    <div class="col-md-2">
+                                        <img class="img-circle" src="Images/avatar_2x.png" style="width: 100px;" />
+                                    </div>
+                                    <div class="col-md-10 text-left">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label><%# Eval("IdConsumidor.Nome") %></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label><%# Eval("DataHora") %></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <span><%# Eval("Comentario") %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                            </ItemTemplate>
+                        </asp:DataList>
                     </div>
                 </div>
+
+
             </form>
         </div>
     </div>
