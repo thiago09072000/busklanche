@@ -169,6 +169,7 @@
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="GerenciamentoComercio.aspx" />
+    <Content Include="Images\avatar_2x.png" />
     <Content Include="Images\estrela1.jpg" />
     <Content Include="Images\estrela2.jpg" />
     <Content Include="ListagemCardapio.aspx" />
