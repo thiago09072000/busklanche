@@ -82,7 +82,7 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM Avaliacoes";
+                string strSQL = @"SELECT * FROM  Avaliacao WHERE idComercio = idComercio ";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
