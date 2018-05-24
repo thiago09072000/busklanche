@@ -13,13 +13,13 @@ namespace BuskLanche.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidao, avaliacao, comentario) VALUES (@idCadComercio, @idCadConsumidao, @avaliacao, @comentario)";
+                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario) VALUES (@idCadComercio, @idCadConsumidor, @avaliacao, @comentario)";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.IdComercio;
-                    cmd.Parameters.Add("@idCadConsumidao", SqlDbType.Int).Value = obj.IdConsumidor;
+                    cmd.Parameters.Add("@idCadConsumidor", SqlDbType.Int).Value = obj.IdConsumidor;
                     cmd.Parameters.Add("@avaliacao", SqlDbType.VarChar).Value = obj.Avalicacao;
                     cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = obj.Comentario;
 
@@ -76,18 +76,19 @@ namespace BuskLanche.DataAccess
             return (lstAvaliacoes);
         }
 
-        public List<Avaliacoes> BuscaID()
+        public List<Avaliacoes> BuscaID(int IdCadComercio)
         {
             var lstAvaliacoes = new List<Avaliacoes>();
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM  Avaliacao WHERE idComercio = idComercio ";
+                string strSQL = @"SELECT * FROM  Avaliacao WHERE idCadComercio = @idCadComercio ";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     conn.Open();
                     cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = IdCadComercio;
                     cmd.CommandText = strSQL;
 
                     var dataReader = cmd.ExecuteReader();
@@ -113,7 +114,7 @@ namespace BuskLanche.DataAccess
                             },
                             Avalicacao = row["avaliacao"].ToString(),
                             Comentario = row["comentario"].ToString()
-                        };
+                    };
                         lstAvaliacoes.Add(Avaliacoes);
                     }
                 }
