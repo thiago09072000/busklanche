@@ -83,7 +83,7 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM  Avaliacao WHERE idCadComercio = @idCadComercio ";
+                string strSQL = @"SELECT * FROM Avaliacoes WHERE idCadComercio = @idCadComercio ";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -120,7 +120,6 @@ namespace BuskLanche.DataAccess
                     }
                 }
             }
-
             return (lstAvaliacoes);
         }
     }
