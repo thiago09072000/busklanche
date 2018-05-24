@@ -83,7 +83,7 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM Avaliacoes WHERE idCadComercio = @idCadComercio ";
+                string strSQL = @"SELECT * FROM Avaliacoes A inner join CadastroComercio CM on A.idCadComercio = CM.idCadComercio inner join CadastroConsumidor CN on A.idCadConsumidor = CN.idCadConsumidor WHERE idCadComercio = @idCadComercio ";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
