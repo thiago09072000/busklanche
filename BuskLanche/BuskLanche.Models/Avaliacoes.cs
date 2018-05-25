@@ -10,11 +10,11 @@ namespace BuskLanche.Models
     {
         public int Id { get; set; }
 
-        public Comercio IdComercio { get; set; }
+        public Comercio Comercio { get; set; }
 
-        public Consumidor IdConsumidor { get; set; }
+        public Consumidor Consumidor { get; set; }
 
-        public string Avaliacao { get; set; }
+        public int Avaliacao { get; set; }
 
         public string Comentario { get; set; }
 

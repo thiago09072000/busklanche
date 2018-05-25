@@ -13,14 +13,14 @@ namespace BuskLanche.DataAccess
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario, dataHora) VALUES (@idCadComercio, @idCadConsumidor, @avaliacao, @comentario, @dataHora)";
+                string strSQL = @"INSERT INTO Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario, dataHora) VALUES (@idCadComercio, @idCadConsumidor, @avaliacao, @comentario, @dataHora);";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.IdComercio;
-                    cmd.Parameters.Add("@idCadConsumidor", SqlDbType.Int).Value = obj.IdConsumidor;
-                    cmd.Parameters.Add("@avaliacao", SqlDbType.VarChar).Value = obj.Avaliacao;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = obj.Comercio.Id;
+                    cmd.Parameters.Add("@idCadConsumidor", SqlDbType.Int).Value = obj.Consumidor.Id;
+                    cmd.Parameters.Add("@avaliacao", SqlDbType.Int).Value = obj.Avaliacao;
                     cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = obj.Comentario;
                     cmd.Parameters.Add("@dataHora", SqlDbType.DateTime).Value = obj.DataHora;
 
@@ -56,34 +56,35 @@ namespace BuskLanche.DataAccess
                         var Avaliacoes = new Avaliacoes()
                         {
                             Id = Convert.ToInt32(row["id"]),
-                            IdComercio = new Comercio()
+                            Comercio = new Comercio()
                             {
                                 Id = Convert.ToInt32(row["idCadComercio"]),
                                 NomeComercio = row["nomeComercio"].ToString()
                             },
-                            IdConsumidor = new Consumidor()
+                            Consumidor = new Consumidor()
                             {
                                 Id = Convert.ToInt32(row["idCadConsumidor"]),
                                 Nome = row["nomeConsumidor"].ToString()
                             },
-                            Avaliacao = row["avaliacao"].ToString(),
-                            Comentario = row["comentario"].ToString()
+                            Avaliacao = Convert.ToInt32(row["avaliacao"]),
+                            Comentario = row["comentario"].ToString(),
+                            DataHora = Convert.ToDateTime(row["dataHora"])
                         };
                         lstAvaliacoes.Add(Avaliacoes);
                     }
                 }
             }
 
-            return (lstAvaliacoes);
+            return lstAvaliacoes;
         }
 
-        public List<Avaliacoes> BuscaID(int IdCadComercio)
+        public List<Avaliacoes> BuscaPorComercio(int IdCadComercio)
         {
             var lstAvaliacoes = new List<Avaliacoes>();
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM Avaliacoes A inner join CadastroComercio CM on A.idCadComercio = CM.idCadComercio inner join CadastroConsumidor CN on A.idCadConsumidor = CN.idCadConsumidor WHERE idCadComercio = @idCadComercio ";
+                string strSQL = @"SELECT a.*, cm.NomeComercio, cn.NomeConsumidor FROM Avaliacoes A inner join CadastroComercio CM on A.idCadComercio = CM.idCadComercio inner join CadastroConsumidor CN on A.idCadConsumidor = CN.idCadConsumidor WHERE A.idCadComercio = @idCadComercio ";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -102,25 +103,26 @@ namespace BuskLanche.DataAccess
                     {
                         var Avaliacoes = new Avaliacoes()
                         {
-                            Id = Convert.ToInt32(row["id"]),
-                            IdComercio = new Comercio()
+                            Id = Convert.ToInt32(row["idAvaliacoes"]),
+                            Comercio = new Comercio()
                             {
                                 Id = Convert.ToInt32(row["idCadComercio"]),
                                 NomeComercio = row["nomeComercio"].ToString()
                             },
-                            IdConsumidor = new Consumidor()
+                            Consumidor = new Consumidor()
                             {
                                 Id = Convert.ToInt32(row["idCadConsumidor"]),
                                 Nome = row["nomeConsumidor"].ToString()
                             },
-                            Avaliacao = row["avaliacao"].ToString(),
-                            Comentario = row["comentario"].ToString()
-                    };
+                            Avaliacao = Convert.ToInt32(row["avaliacao"]),
+                            Comentario = row["comentario"].ToString(),
+                            DataHora = Convert.ToDateTime(row["dataHora"])
+                        };
                         lstAvaliacoes.Add(Avaliacoes);
                     }
                 }
             }
-            return (lstAvaliacoes);
+            return lstAvaliacoes;
         }
     }
 }

@@ -4,7 +4,8 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form id="Form2" runat="server" class="form-horizontal">
+            <form runat="server" class="form-horizontal">
+                <asp:HiddenField ID="lblNotaAvaliacao" runat="server" Value="0" />
                 <div class="form-group">
                     <div class="col-md-3">
                         <asp:Label ID="lblAvaliacaoSobre" runat="server" CssClass="control-label" Style="font-size: 30px; margin-left: 20px; color: red">Avaliação Sobre:</asp:Label>
@@ -23,19 +24,23 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela1" runat="server" OnClick="lnkEstrela1_Click">
+                                        <img id="imgEstrela1" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela2" runat="server" OnClick="lnkEstrela2_Click">
+                                        <img id="imgEstrela2" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <img id="imgEstrela3" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <img id="imgEstrela4" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <img id="imgEstrela5" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
                                 </td>
                             </tr>
                         </table>
@@ -43,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
-                        <asp:Button ID="btnSelecionar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" OnClick="btnSelecionar_Click" />
+                        <asp:Button ID="btnEnviarAvaliacao" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Enviar Avaliação" OnClick="btnEnviarAvaliacao_Click" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -57,7 +62,7 @@
                                     <div class="col-md-10 text-left">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <label><%# Eval("IdConsumidor.Nome") %></label>
+                                                <label><%# Eval("Consumidor.Nome") %></label>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -77,8 +82,6 @@
                         </asp:DataList>
                     </div>
                 </div>
-
-
             </form>
         </div>
     </div>
