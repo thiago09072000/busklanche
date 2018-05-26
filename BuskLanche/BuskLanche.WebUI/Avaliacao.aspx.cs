@@ -66,5 +66,35 @@ namespace BuskLanche.WebUI
             imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
             lblNotaAvaliacao.Value = "2";
         }
+
+        protected void lnkEstrela3_Click(object sender, EventArgs e)
+        {
+            imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+            imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+            lblNotaAvaliacao.Value = "3";
+        }
+
+        protected void lnkEstrela4_Click(object sender, EventArgs e)
+        {
+            imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+            lblNotaAvaliacao.Value = "2";
+        }
+
+        protected void lnkEstrela5_Click(object sender, EventArgs e)
+        {
+            imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+            lblNotaAvaliacao.Value = "3";
+        }
     }
 }

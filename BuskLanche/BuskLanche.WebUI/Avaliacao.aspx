@@ -34,13 +34,19 @@
                                     </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img id="imgEstrela3" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela3" runat="server" OnClick="lnkEstrela3_Click">
+                                        <img id="imgEstrela3" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img id="imgEstrela4" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela4" runat="server" OnClick="lnkEstrela4_Click">
+                                        <img id="imgEstrela4" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img id="imgEstrela5" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela5" runat="server" OnClick="lnkEstrela5_Click">
+                                        <img id="imgEstrela5" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                             </tr>
                         </table>

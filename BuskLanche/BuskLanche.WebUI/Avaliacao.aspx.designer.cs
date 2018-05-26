@@ -103,6 +103,15 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlImage imgEstrela2;
         
         /// <summary>
+        /// lnkEstrela3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkEstrela3;
+        
+        /// <summary>
         /// imgEstrela3 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlImage imgEstrela3;
         
         /// <summary>
+        /// lnkEstrela4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkEstrela4;
+        
+        /// <summary>
         /// imgEstrela4 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,15 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage imgEstrela4;
+        
+        /// <summary>
+        /// lnkEstrela5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkEstrela5;
         
         /// <summary>
         /// imgEstrela5 control.
