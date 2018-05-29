@@ -9,7 +9,7 @@
                     <asp:Label ID="lblCadastro" runat="server" CssClass="control-label" Style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</asp:Label>
                 </div>
                 <div class="col-md-9">
-                    <asp:Label ID="lblUsuarioAnunciante" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante</asp:Label>
+                    <asp:Label ID="lblUsuarioAnunciante" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anunciante</asp:Label>
                 </div>
             </div>
             <div class="form-group">

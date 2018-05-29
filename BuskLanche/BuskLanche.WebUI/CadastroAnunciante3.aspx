@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="col-md-9">
-                    <asp:Label ID="lblUsuarioAnunciane" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anúnciante </asp:Label>
+                    <asp:Label ID="lblUsuarioAnunciane" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anunciante </asp:Label>
                 </div>
 
             </div>

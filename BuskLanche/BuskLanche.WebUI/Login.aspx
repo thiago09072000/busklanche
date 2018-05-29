@@ -26,7 +26,7 @@
                     <asp:Label ID="lblUsuario" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Usuário: </asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <asp:RadioButton ID="rdoAnunciante" GroupName="usuario" Text="Anúnciante" runat="server" />
+                    <asp:RadioButton ID="rdoAnunciante" GroupName="usuario" Text="Anunciante" runat="server" />
                 </div>
                 <div class="col-lg-4">
                     <asp:RadioButton ID="rdoUsuario" GroupName="usuario" Text="Consumidor" runat="server" />
