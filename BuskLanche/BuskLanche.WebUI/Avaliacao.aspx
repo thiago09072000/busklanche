@@ -54,12 +54,13 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-12 text-right">
+                        <asp:Button ID="btnVoltar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Voltar" OnClick="btnVoltar_Click" />
                         <asp:Button ID="btnEnviarAvaliacao" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Enviar Avaliação" OnClick="btnEnviarAvaliacao_Click" />
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
-                        <asp:DataList ID="gridView" CssClass="table text-center" runat="server" RepeatColumns="1" RepeatLayout="Table">
+                        <asp:DataList ID="gridView" CssClass="table text-center" runat="server" RepeatColumns="1" RepeatLayout="Table" OnSelectedIndexChanged="gridView_SelectedIndexChanged">
                             <ItemTemplate>
                                 <div class="form-group">
                                     <div class="col-md-2">

@@ -157,6 +157,15 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlImage imgEstrela5;
         
         /// <summary>
+        /// btnVoltar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVoltar;
+        
+        /// <summary>
         /// btnEnviarAvaliacao control.
         /// </summary>
         /// <remarks>

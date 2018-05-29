@@ -96,5 +96,16 @@ namespace BuskLanche.WebUI
             imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
             lblNotaAvaliacao.Value = "3";
         }
+
+        protected void gridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            var idComercio = Convert.ToInt32(Request.QueryString["id"]);
+            Response.Redirect(string.Format("exibicaoComercio.aspx?id={0}", idComercio));
+        }
     }
 }
