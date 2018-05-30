@@ -9,6 +9,16 @@
     </div>
     <div class="row">
         <form id="Form2" runat="server" class="form-horizontal">
+            <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Alerta!</strong>
+                            <asp:Label ID="lblMSG" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
             <div class="form-group">
                 <div class="col-lg-12">
                     <asp:Label ID="lblEmail" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Email:</asp:Label>
@@ -26,7 +36,7 @@
                     <asp:Label ID="lblUsuario" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Usuário: </asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <asp:RadioButton ID="rdoAnunciante" GroupName="usuario" Text="Anunciante" runat="server" />
+                    <asp:RadioButton ID="rdoAnunciante" GroupName="usuario" Text="Anunciante" runat="server" Checked="true" />
                 </div>
                 <div class="col-lg-4">
                     <asp:RadioButton ID="rdoUsuario" GroupName="usuario" Text="Consumidor" runat="server" />

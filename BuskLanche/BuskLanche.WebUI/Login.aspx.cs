@@ -24,6 +24,14 @@ namespace BuskLanche.WebUI
             {
                 var usuarioLogado = new ComercioDAO().Logar(txtEmail.Text, txtSenha.Text);
 
+                if (usuarioLogado == null)
+                {
+                    pnlMSG.Visible = true;
+                    lblMSG.Text = "Login e/ou Senha inválida!";
+                    txtSenha.Focus();
+                    return;
+                }
+
                 var userData = new JavaScriptSerializer().Serialize(new Usuario()
                 {
                     Id = usuarioLogado.Id,
@@ -38,6 +46,14 @@ namespace BuskLanche.WebUI
             else
             {
                 var usuarioLogado = new ConsumidorDAO().Logar(txtEmail.Text, txtSenha.Text);
+
+                if (usuarioLogado == null)
+                {
+                    pnlMSG.Visible = true;
+                    lblMSG.Text = "Login e/ou Senha inválida!";
+                    txtSenha.Focus();
+                    return;
+                }
 
                 var userData = new JavaScriptSerializer().Serialize(new Usuario()
                 {
