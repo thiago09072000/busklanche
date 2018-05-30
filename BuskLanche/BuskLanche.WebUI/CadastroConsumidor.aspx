@@ -12,7 +12,16 @@
                     <asp:Label ID="lblUsuarioConsumidor" runat="server" CssClass="control-label" style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Consumidor</asp:Label>
                 </div>
             </div>
-
+            <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Alerta!</strong>
+                            <asp:Label ID="lblMSG" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
             <div class="form-group">
                 <div class="col-lg-12">
                     <asp:Label ID="lblNomeConsumidor" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Nome completo:</asp:Label>

@@ -20,10 +20,19 @@ namespace BuskLanche.WebUI
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
             var obj = new Consumidor();
+
             obj.Nome = txtNomeConsumidor.Text;
             obj.Senha = txtSenha.Text;
             obj.Email = txtEmail.Text;
             obj.Cpf = txtCPF.Text;
+
+            if (obj == null)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "alerta!";
+                txtNomeConsumidor.Focus();
+                return;
+            }
 
             new ConsumidorDAO().Inserir(obj);
 
