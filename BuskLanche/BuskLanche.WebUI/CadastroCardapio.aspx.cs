@@ -31,6 +31,8 @@ namespace BuskLanche.WebUI
             }
         }
 
+
+
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             var obj = new Cardapio();
@@ -39,6 +41,27 @@ namespace BuskLanche.WebUI
             obj.Ingrediente = txtIngredientes.Text;
             obj.Preco = !string.IsNullOrWhiteSpace(txtPreco.Text) ? Convert.ToDecimal(txtPreco.Text) : decimal.Zero;
 
+            if (obj.Nome == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo nome deve ser preenchido";
+                txtNomeLanche.Focus();
+                return;
+            }
+            if (obj.Ingrediente == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo nome deve ser preenchido";
+                txtIngredientes.Focus();
+                return;
+            }
+            //if (obj.Preco == "")
+            //{
+            //    pnlMSG.Visible = true;
+            //    lblMSG.Text = "O campo nome deve ser preenchido";
+            //    txtIngredientes.Focus();
+            //    return;
+            //}
             //pegando valor do id do comercio da url do navegador e vinculando ao objeto cardápio
             var idComercio = Convert.ToInt32(Request.QueryString["idComercio"]);
             obj.Comercio = new Comercio() { Id = idComercio };
@@ -50,6 +73,9 @@ namespace BuskLanche.WebUI
 
             Response.Redirect(string.Format("ListagemCardapio.aspx?id={0}", obj.Comercio.Id));
         }
+
+
+
 
         protected void btnVoltar_Click(object sender, EventArgs e)
         {
