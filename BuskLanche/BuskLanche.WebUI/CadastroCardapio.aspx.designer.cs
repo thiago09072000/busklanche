@@ -13,6 +13,24 @@ namespace BuskLanche.WebUI {
     public partial class CadastroCardapio {
         
         /// <summary>
+        /// pnlMSG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlMSG;
+        
+        /// <summary>
+        /// lblMSG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMSG;
+        
+        /// <summary>
         /// hdfIdComercio control.
         /// </summary>
         /// <remarks>

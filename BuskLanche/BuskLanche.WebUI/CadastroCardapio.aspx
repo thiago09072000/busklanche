@@ -5,6 +5,20 @@
     <div class="row">
         <div class="col-lg-12">
             <form runat="server" class="form-horizontal">
+
+                <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Alerta!</strong>
+                                <asp:Label ID="lblMSG" runat="server" />
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
+
+
                 <asp:HiddenField ID="hdfIdComercio" runat="server" Value="0" />
                 <div class="form-group">
                     <div class="col-lg-12 text-center">

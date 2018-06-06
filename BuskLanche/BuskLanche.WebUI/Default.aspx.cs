@@ -17,7 +17,23 @@ namespace BuskLanche.WebUI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ResultadoBusk.aspx");
+
+
+
+
+            if (txtInfCEP.Text == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                txtInfCEP.Focus();
+                return;
+            }
+            else
+            {
+                Response.Redirect("ResultadoBusk.aspx");
+            }
+
+            //Response.Redirect("ResultadoBusk.aspx");
         }
     }
 }

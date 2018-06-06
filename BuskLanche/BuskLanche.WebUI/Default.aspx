@@ -9,6 +9,18 @@
     </div>
     <div class="col-lg-12">
         <form id="Form2" runat="server" class="form-horizontal">
+
+              <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Alerta!</strong>
+                            <asp:Label ID="lblMSG" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
+
             <div class="form-group">
                 <div class="col-lg-12">
                     <asp:Label ID="lblInfCEP" runat="server" CssClass="control-label" style="font-size: x-large; margin-top: 50px">Informe seu CEP atual</asp:Label>
