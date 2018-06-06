@@ -26,17 +26,20 @@ namespace BuskLanche.WebUI
             obj.Email = txtEmail.Text;
             obj.Cpf = txtCPF.Text;
 
-            if (obj.Nome == null)
+            if (obj.Nome == "")
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "alerta!";
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
                 txtNomeConsumidor.Focus();
                 return;
             }
+            else
+            {
+                new ConsumidorDAO().Inserir(obj);
 
-            new ConsumidorDAO().Inserir(obj);
-
-            Response.Redirect("Login.aspx");
+                Response.Redirect("Login.aspx");
+            }
+            
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
