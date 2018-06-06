@@ -17,14 +17,10 @@ namespace BuskLanche.WebUI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
-
-
-
             if (txtInfCEP.Text == "")
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "O campo CEP deve preenchidos";
                 txtInfCEP.Focus();
                 return;
             }

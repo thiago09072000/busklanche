@@ -40,13 +40,18 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <asp:Label ID="lblCamposObrigatorios" runat="server" CssClass="control-label" Style="color: red; margin-top: 100px">*Todos os campos são obrigatórios</asp:Label>
                 </div>
-                <div class="col-lg-6 text-right">
-                    <asp:Button ID="btnProximoCad" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnProximoCad_Click" />
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-12 text-right">
+                    <asp:Button ID="btnVoltar" runat="server" Text="Voltar" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnVoltar_Click" />
+                     <asp:Button ID="btnProximoCad" runat="server" Text="Proxímo" class="btn btn-danger" Style="font-size: large; margin-top: 100px" OnClick="btnProximoCad_Click" />
                 </div>
             </div>
+
         </form>
     </div>
     <script type="text/javascript">

@@ -34,5 +34,10 @@ namespace BuskLanche.WebUI
             var id = new ComercioDAO().Inserir(obj);
             Response.Redirect(string.Format("CadastroAnunciante2.aspx?id={0}", id));
         }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EscolhaCadastro.aspx");
+        }
     }
 }
