@@ -27,6 +27,14 @@ namespace BuskLanche.WebUI
             obj.Rua = txtRua.Text;
             obj.Complemento = txtComplemento.Text;
 
+            if (obj.Bairro == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                txtBairro.Focus();
+                return;
+            }
+
             new ComercioDAO().Atualizar2(obj);
 
             Response.Redirect(string.Format("CadastroAnunciante3.aspx?id={0}", obj.Id));

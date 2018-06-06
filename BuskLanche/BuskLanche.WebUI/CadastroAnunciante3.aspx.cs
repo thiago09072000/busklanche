@@ -27,6 +27,14 @@ namespace BuskLanche.WebUI
             obj.CpfRepresentante = txtCPF.Text;
             obj.TelefoneRepresentante = txtCelular.Text;
 
+            if (obj.Nome == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                txtNomeCompleto.Focus();
+                return;
+            }
+
             new ComercioDAO().Atualizar3(obj);
 
             Response.Redirect(string.Format("CadastroAnunciante4.aspx?id={0}", obj.Id));

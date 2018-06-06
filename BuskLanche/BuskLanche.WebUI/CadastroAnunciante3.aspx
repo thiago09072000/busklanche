@@ -4,25 +4,29 @@
 
     <div class="row">
         <form id="Form2" runat="server" class="form-horizontal">
+            <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Alerta!</strong>
+                            <asp:Label ID="lblMSG" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
             <div class="form-group">
                 <div class="col-md-3">
                     <asp:Label ID="lblCadastro" runat="server" CssClass="control-label" Style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</asp:Label>
-
                 </div>
-
                 <div class="col-md-9">
                     <asp:Label ID="lblUsuarioAnunciane" runat="server" CssClass="control-label" Style="font-size: 20px; margin-top: 20px; color: cornflowerblue">Usuário Anunciante </asp:Label>
                 </div>
-
             </div>
-
             <div class="form-group">
                 <div class="col-md-12">
                     <asp:Label ID="lblRepresentanteComercio" runat="server" CssClass="control-label" Style="font-size: 30px; margin-left: 30px; color: black">Inserir: Representante do comércio</asp:Label>
                 </div>
             </div>
-
-
             <div class="form-group">
                 <div class="col-lg-12">
                     <asp:Label ID="lblNomeCompleto" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Nome completo:</asp:Label>

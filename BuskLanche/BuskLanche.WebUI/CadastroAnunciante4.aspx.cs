@@ -26,6 +26,14 @@ namespace BuskLanche.WebUI
             obj.HorarioEncerramento = txtEncerramento.Text;
             obj.DescricaoComercio = txtDescrevaComercio.Text;
 
+            if (obj.EstiloDoLanche == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                txtEstiloLanches.Focus();
+                return;
+            }
+
             new ComercioDAO().Atualizar4(obj);
 
             Response.Redirect("Login.aspx");

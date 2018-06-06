@@ -4,6 +4,16 @@
 
     <div class="row">
         <form id="Form2" runat="server" class="form-horizontal">
+            <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Alerta!</strong>
+                            <asp:Label ID="lblMSG" runat="server" />
+                        </div>
+                    </div>
+                </div>
+            </asp:Panel>
             <div class="form-group">
                 <div class="col-md-3">
                     <asp:Label ID="lblCadastro" runat="server" CssClass="control-label" Style="font-size: 40px; margin-left: 20px; color: red">Cadastro:</asp:Label>

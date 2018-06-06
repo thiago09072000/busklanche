@@ -23,6 +23,14 @@ namespace BuskLanche.WebUI
             obj.NomeComercio = txtNomeRestaurante.Text;
             obj.Cnpj = txtCNPJ.Text;
 
+            if (obj.NomeComercio == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                txtNomeRestaurante.Focus();
+                return;
+            }
+
             var id = new ComercioDAO().Inserir(obj);
             Response.Redirect(string.Format("CadastroAnunciante2.aspx?id={0}", id));
         }
