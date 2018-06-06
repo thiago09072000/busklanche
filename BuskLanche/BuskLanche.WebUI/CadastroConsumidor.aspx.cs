@@ -26,7 +26,7 @@ namespace BuskLanche.WebUI
             obj.Email = txtEmail.Text;
             obj.Cpf = txtCPF.Text;
 
-            if (obj == null)
+            if (obj.Nome == null)
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "alerta!";
