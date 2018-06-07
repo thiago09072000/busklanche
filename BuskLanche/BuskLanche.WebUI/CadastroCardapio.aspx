@@ -54,4 +54,10 @@
         </div>
     </div>
 
+      <script type="text/javascript">
+        $(document).ready(function () {
+            $("#MainContent_txtPreco").setMask("decimal");
+        });
+    </script>
+
 </asp:Content>
