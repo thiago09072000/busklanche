@@ -29,8 +29,29 @@ namespace BuskLanche.WebUI
             if (string.IsNullOrWhiteSpace(obj.EstiloDoLanche))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "O campo Estilo do Lanche devem ser preenchidos";
                 txtEstiloLanches.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.HorarioAbertura))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Horario Abertura devem ser preenchidos";
+                txtAberto.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.HorarioEncerramento))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Horario Encerramento devem ser preenchidos";
+                txtEncerramento.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.DescricaoComercio))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Descricao Comercio devem ser preenchidos";
+                txtDescrevaComercio.Focus();
                 return;
             }
 

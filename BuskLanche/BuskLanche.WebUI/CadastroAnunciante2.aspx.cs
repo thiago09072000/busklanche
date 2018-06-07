@@ -27,11 +27,39 @@ namespace BuskLanche.WebUI
             obj.Rua = txtRua.Text;
             obj.Complemento = txtComplemento.Text;
 
-            if (obj.Bairro == "")
+            if (string.IsNullOrWhiteSpace(obj.Bairro))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "O campo Bairro devem ser preenchidos";
                 txtBairro.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.Cep))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Cep devem ser preenchidos";
+                txtCEP.Focus();
+                return;
+            }
+            if (obj.Numero == 0)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Número devem ser preenchidos";
+                txtNumero.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.Rua))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Rua devem ser preenchidos";
+                txtRua.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(obj.Complemento))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Complemento devem ser preenchidos";
+                txtComplemento.Focus();
                 return;
             }
 
