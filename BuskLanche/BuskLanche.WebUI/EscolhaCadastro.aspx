@@ -14,7 +14,7 @@
                      <asp:Button ID="btnConsumidor" runat="server" Text="Consumidor" class="btn btn-danger btn-lg btn-block" Style="font-size: large; margin-top: 100px" OnClick="btnConsumidor_Click1" />
                 </div>
                 <div class="col-md-6 text-center">
-                     <asp:Button ID="BbtnAnunciante" runat="server" Text="Anuncinate" class="btn btn-danger btn-lg btn-block" Style="font-size: large; margin-top: 100px" OnClick="BbtnAnunciante_Click"  />
+                     <asp:Button ID="BbtnAnunciante" runat="server" Text="Anunciante" class="btn btn-danger btn-lg btn-block" Style="font-size: large; margin-top: 100px" OnClick="BbtnAnunciante_Click"  />
                 </div>
 
                 <div class="form-group">
