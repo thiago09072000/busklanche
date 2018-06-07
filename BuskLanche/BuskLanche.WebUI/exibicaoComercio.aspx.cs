@@ -34,7 +34,7 @@ namespace BuskLanche.WebUI
 
         protected void btnFechar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ResultadoBusk.aspx");
+            Response.Redirect("Default.aspx");
         }
 
         protected void btnAvaliar_Click(object sender, EventArgs e)
