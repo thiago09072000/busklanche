@@ -27,7 +27,7 @@ namespace BuskLanche.WebUI
             obj.CpfRepresentante = txtCPF.Text;
             obj.TelefoneRepresentante = txtCelular.Text;
 
-            if (obj.Nome == "")
+            if (string.IsNullOrWhiteSpace(obj.Nome))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Todos os campos devem ser preenchidos";

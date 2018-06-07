@@ -26,7 +26,7 @@ namespace BuskLanche.WebUI
             obj.HorarioEncerramento = txtEncerramento.Text;
             obj.DescricaoComercio = txtDescrevaComercio.Text;
 
-            if (obj.EstiloDoLanche == "")
+            if (string.IsNullOrWhiteSpace(obj.EstiloDoLanche))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Todos os campos devem ser preenchidos";
