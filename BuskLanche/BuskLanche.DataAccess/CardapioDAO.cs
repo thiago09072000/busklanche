@@ -151,18 +151,18 @@ namespace BuskLanche.DataAccess
 
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = idCadComercio;";
+                string strSQL = @"SELECT * FROM CadastroDeCardapio WHERE idCadComercio = @idCadComercio;";
 
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     conn.Open();
                     cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.Int).Value = idCadComercio;
                     cmd.CommandText = strSQL;
 
                     var dataReader = cmd.ExecuteReader();
                     var dt = new DataTable();
                     dt.Load(dataReader);
-
                     conn.Close();
 
                     foreach (DataRow row in dt.Rows)

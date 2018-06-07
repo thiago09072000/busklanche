@@ -14,9 +14,14 @@ namespace BuskLanche.WebUI
         {
             if (IsPostBack)
                 return;
-            var lst = new ComercioDAO().BuscarTodos();
-            grdComercio.DataSource = lst;
-            grdComercio.DataBind();
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["cep"]))
+            {
+                var cep = Request.QueryString["cep"];
+                var lst = new ComercioDAO().BuscarPorCep(cep);
+                grdComercio.DataSource = lst;
+                grdComercio.DataBind();
+            }
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

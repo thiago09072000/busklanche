@@ -51,6 +51,8 @@ namespace BuskLanche.Models
             }
         }
 
+        public decimal NotaMedia { get; set; }
+
         public List<Cardapio> Cardapio { get; set; }
 
         public Comercio()

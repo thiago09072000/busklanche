@@ -17,7 +17,7 @@ namespace BuskLanche.WebUI
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtInfCEP.Text == "")
+            if (string.IsNullOrWhiteSpace(txtInfCEP.Text))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "O campo CEP deve preenchidos";
@@ -26,10 +26,8 @@ namespace BuskLanche.WebUI
             }
             else
             {
-                Response.Redirect("ResultadoBusk.aspx");
+                Response.Redirect(string.Format("ResultadoBusk.aspx?cep={0}", txtInfCEP.Text));
             }
-
-            //Response.Redirect("ResultadoBusk.aspx");
         }
     }
 }

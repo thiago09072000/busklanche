@@ -192,106 +192,6 @@ namespace BuskLanche.DataAccess
             }
         }
 
-        public Comercio BuscarPorId(int idCadComercio)
-        {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-                string strSQL = @"SELECT * FROM CadastroComercio WHERE idCadComercio = @idCadComercio;";
-
-                using (SqlCommand cmd = new SqlCommand(strSQL))
-                {
-                    conn.Open();
-                    cmd.Connection = conn;
-                    cmd.Parameters.Add("@idCadComercio", SqlDbType.VarChar).Value = idCadComercio;
-                    cmd.CommandText = strSQL;
-
-                    var dataReader = cmd.ExecuteReader();
-                    var dt = new DataTable();
-                    dt.Load(dataReader);
-                    conn.Close();
-
-                    if (!(dt != null && dt.Rows.Count > 0))
-                        return null;
-
-                    var row = dt.Rows[0];
-                    var comercio = new Comercio()
-                    {
-                        Id = Convert.ToInt32(row["idCadComercio"]),
-                        Cnpj = row["cnpj"].ToString(),
-                        NomeComercio = row["nomeComercio"].ToString(),
-                        Bairro = row["bairro"].ToString(),
-                        Rua = row["rua"].ToString(),
-                        Numero = Convert.ToInt32(row["numero"]),
-                        Cep = row["cep"].ToString(),
-                        Complemento = row["complemento"].ToString(),
-                        Nome = row["nomeRepresentante"].ToString(),
-                        Email = row["emailRepresentante"].ToString(),
-                        Senha = row["senhaRepresentante"].ToString(),
-                        CpfRepresentante = row["cpfRepresentante"].ToString(),
-                        TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
-                        EstiloDoLanche = row["estiloDoLanche"].ToString(),
-                        HorarioAbertura = row["horarioAbertura"].ToString(),
-                        HorarioEncerramento = row["horarioEnceramento"].ToString(),
-                        DescricaoComercio = row["DescricaoComercio"].ToString()
-
-                    };
-
-                    return comercio;
-                }
-            }
-        }
-
-        public List<Comercio> BuscarTodos()
-        {
-            var lstComercio = new List<Comercio>();
-
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-                string strSQL = @"SELECT * FROM CadastroComercio";
-
-                using (SqlCommand cmd = new SqlCommand(strSQL))
-                {
-                    conn.Open();
-                    cmd.Connection = conn;
-                    cmd.CommandText = strSQL;
-
-                    var dataReader = cmd.ExecuteReader();
-                    var dt = new DataTable();
-                    dt.Load(dataReader);
-
-                    conn.Close();
-
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        var Comercio = new Comercio()
-                        {
-                            Id = Convert.ToInt32(row["idCadComercio"]),
-                            Cnpj = row["cnpj"].ToString(),
-                            NomeComercio = row["nomeComercio"].ToString(),
-                            Bairro = row["bairro"].ToString(),
-                            Rua = row["rua"].ToString(),
-                            Numero = Convert.ToInt32(row["numero"]),
-                            Cep = row["cep"].ToString(),
-                            Complemento = row["complemento"].ToString(),
-                            Nome = row["nomeRepresentante"].ToString(),
-                            Email = row["emailRepresentante"].ToString(),
-                            Senha = row["senhaRepresentante"].ToString(),
-                            CpfRepresentante = row["cpfRepresentante"].ToString(),
-                            TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
-                            EstiloDoLanche = row["estiloDoLanche"].ToString(),
-                            HorarioAbertura = row["horarioAbertura"].ToString(),
-                            HorarioEncerramento = row["horarioEnceramento"].ToString(),
-                            DescricaoComercio = row["DescricaoComercio"].ToString()
-
-                        };
-                        lstComercio.Add(Comercio);
-                    }
-                }
-            }
-
-            return (lstComercio);
-        }
-
         public Comercio Logar(string email, string senha)
         {
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
@@ -340,6 +240,167 @@ namespace BuskLanche.DataAccess
                     return comercio;
                 }
             }
+        }
+
+        public Comercio BuscarPorId(int idCadComercio)
+        {
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"SELECT 
+                                    *, 
+                                    coalesce((select cast(avg(cast(avaliacao as decimal(15,2))) as decimal(15,2)) as media_nota from Avaliacoes where idCadComercio = CadastroComercio.idCadComercio), 0) as media_nota
+                                FROM CadastroComercio WHERE idCadComercio = @idCadComercio;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@idCadComercio", SqlDbType.VarChar).Value = idCadComercio;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var comercio = new Comercio()
+                    {
+                        Id = Convert.ToInt32(row["idCadComercio"]),
+                        Cnpj = row["cnpj"].ToString(),
+                        NomeComercio = row["nomeComercio"].ToString(),
+                        Bairro = row["bairro"].ToString(),
+                        Rua = row["rua"].ToString(),
+                        Numero = Convert.ToInt32(row["numero"]),
+                        Cep = row["cep"].ToString(),
+                        Complemento = row["complemento"].ToString(),
+                        Nome = row["nomeRepresentante"].ToString(),
+                        Email = row["emailRepresentante"].ToString(),
+                        Senha = row["senhaRepresentante"].ToString(),
+                        CpfRepresentante = row["cpfRepresentante"].ToString(),
+                        TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                        EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                        HorarioAbertura = row["horarioAbertura"].ToString(),
+                        HorarioEncerramento = row["horarioEnceramento"].ToString(),
+                        DescricaoComercio = row["DescricaoComercio"].ToString(),
+                        NotaMedia = Convert.ToDecimal(row["media_nota"])
+                    };
+
+                    return comercio;
+                }
+            }
+        }
+
+        public List<Comercio> BuscarTodos()
+        {
+            var lstComercio = new List<Comercio>();
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"SELECT 
+                                      *,
+                                      coalesce((select cast(avg(cast(avaliacao as decimal(15,2))) as decimal(15,2)) as media_nota from Avaliacoes where idCadComercio = CadastroComercio.idCadComercio), 0) as media_nota
+                                  FROM CadastroComercio";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        var Comercio = new Comercio()
+                        {
+                            Id = Convert.ToInt32(row["idCadComercio"]),
+                            Cnpj = row["cnpj"].ToString(),
+                            NomeComercio = row["nomeComercio"].ToString(),
+                            Bairro = row["bairro"].ToString(),
+                            Rua = row["rua"].ToString(),
+                            Numero = Convert.ToInt32(row["numero"]),
+                            Cep = row["cep"].ToString(),
+                            Complemento = row["complemento"].ToString(),
+                            Nome = row["nomeRepresentante"].ToString(),
+                            Email = row["emailRepresentante"].ToString(),
+                            Senha = row["senhaRepresentante"].ToString(),
+                            CpfRepresentante = row["cpfRepresentante"].ToString(),
+                            TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                            EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                            HorarioAbertura = row["horarioAbertura"].ToString(),
+                            HorarioEncerramento = row["horarioEnceramento"].ToString(),
+                            DescricaoComercio = row["DescricaoComercio"].ToString(),
+                            NotaMedia = Convert.ToDecimal(row["media_nota"])
+                        };
+
+                        lstComercio.Add(Comercio);
+                    }
+                }
+            }
+
+            return (lstComercio);
+        }
+
+        public List<Comercio> BuscarPorCep(string cep)
+        {
+            var lstComercio = new List<Comercio>();
+
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
+            {
+                string strSQL = @"SELECT 
+                                    *,
+                                    coalesce((select cast(avg(cast(avaliacao as decimal(15,2))) as decimal(15,2)) as media_nota from Avaliacoes where idCadComercio = CadastroComercio.idCadComercio), 0) as media_nota
+                                FROM CadastroComercio WHERE cep = @cep;";
+
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@cep", SqlDbType.VarChar).Value = cep ?? string.Empty;
+                    cmd.CommandText = strSQL;
+
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        var Comercio = new Comercio()
+                        {
+                            Id = Convert.ToInt32(row["idCadComercio"]),
+                            Cnpj = row["cnpj"].ToString(),
+                            NomeComercio = row["nomeComercio"].ToString(),
+                            Bairro = row["bairro"].ToString(),
+                            Rua = row["rua"].ToString(),
+                            Numero = Convert.ToInt32(row["numero"]),
+                            Cep = row["cep"].ToString(),
+                            Complemento = row["complemento"].ToString(),
+                            Nome = row["nomeRepresentante"].ToString(),
+                            Email = row["emailRepresentante"].ToString(),
+                            Senha = row["senhaRepresentante"].ToString(),
+                            CpfRepresentante = row["cpfRepresentante"].ToString(),
+                            TelefoneRepresentante = row["telefoneRepresentante"].ToString(),
+                            EstiloDoLanche = row["estiloDoLanche"].ToString(),
+                            HorarioAbertura = row["horarioAbertura"].ToString(),
+                            HorarioEncerramento = row["horarioEnceramento"].ToString(),
+                            DescricaoComercio = row["DescricaoComercio"].ToString(),
+                            NotaMedia = Convert.ToDecimal(row["media_nota"])
+                        };
+
+                        lstComercio.Add(Comercio);
+                    }
+                }
+            }
+
+            return (lstComercio);
         }
     }
 }

@@ -30,6 +30,13 @@ namespace BuskLanche.WebUI
                 txtNomeRestaurante.Focus();
                 return;
             }
+            if (obj.Cnpj == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo CNPJ deve ser preenchido";
+                txtCNPJ.Focus();
+                return;
+            }
 
             var id = new ComercioDAO().Inserir(obj);
             Response.Redirect(string.Format("CadastroAnunciante2.aspx?id={0}", id));
