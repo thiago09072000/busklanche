@@ -36,21 +36,21 @@ namespace BuskLanche.WebUI
             if (string.IsNullOrWhiteSpace(obj.Senha))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Campo senha deve ser preenchido";
+                lblMSG.Text = "Campo Senha deve ser preenchido";
                 txtSenha.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(obj.Email))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Campo senha deve ser preenchido";
+                lblMSG.Text = "Campo Email deve ser preenchido";
                 txtEmail.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(obj.Cpf))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Campo senha deve ser preenchido";
+                lblMSG.Text = "Campo Cpf deve ser preenchido";
                 txtCPF.Focus();
                 return;
             }
