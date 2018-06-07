@@ -51,17 +51,17 @@ namespace BuskLanche.WebUI
             if (obj.Ingrediente == "")
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "O campo nome deve ser preenchido";
+                lblMSG.Text = "O campo Ingrediente deve ser preenchido";
                 txtIngredientes.Focus();
                 return;
             }
-            //if (obj.Preco == "")
-            //{
-            //    pnlMSG.Visible = true;
-            //    lblMSG.Text = "O campo nome deve ser preenchido";
-            //    txtIngredientes.Focus();
-            //    return;
-            //}
+            if (obj.Preco == 0)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Preço deve ser preenchido";
+                txtPreco.Focus();
+                return;
+            }
             //pegando valor do id do comercio da url do navegador e vinculando ao objeto cardápio
             var idComercio = Convert.ToInt32(Request.QueryString["idComercio"]);
             obj.Comercio = new Comercio() { Id = idComercio };
