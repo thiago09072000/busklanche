@@ -30,8 +30,40 @@ namespace BuskLanche.WebUI
             if (string.IsNullOrWhiteSpace(obj.Nome))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "O campo Nome deve ser preenchido";
                 txtNomeCompleto.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(obj.Email))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Email deve ser preenchido";
+                txtEmail.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(obj.Senha))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Email deve ser preenchido";
+                txtSenha.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(obj.CpfRepresentante))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Email deve ser preenchido";
+                txtCPF.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(obj.TelefoneRepresentante))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Email deve ser preenchido";
+                txtCelular.Focus();
                 return;
             }
 
