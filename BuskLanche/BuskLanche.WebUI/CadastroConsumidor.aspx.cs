@@ -29,10 +29,33 @@ namespace BuskLanche.WebUI
             if (obj.Nome == "")
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "Campo Nome deve ser preenchido";
                 txtNomeConsumidor.Focus();
                 return;
             }
+            if (obj.Senha == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Campo senha deve ser preenchido";
+                txtSenha.Focus();
+                return;
+            }
+            if (obj.Email == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Campo senha deve ser preenchido";
+                txtEmail.Focus();
+                return;
+            }
+            if (obj.Cpf == "")
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "Campo senha deve ser preenchido";
+                txtCPF.Focus();
+                return;
+            }
+
+
             else
             {
                 new ConsumidorDAO().Inserir(obj);
