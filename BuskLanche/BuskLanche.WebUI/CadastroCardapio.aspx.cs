@@ -41,14 +41,14 @@ namespace BuskLanche.WebUI
             obj.Ingrediente = txtIngredientes.Text;
             obj.Preco = !string.IsNullOrWhiteSpace(txtPreco.Text) ? Convert.ToDecimal(txtPreco.Text) : decimal.Zero;
 
-            if (obj.Nome == "")
+            if (string.IsNullOrWhiteSpace(obj.Nome))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "O campo nome deve ser preenchido";
                 txtNomeLanche.Focus();
                 return;
             }
-            if (obj.Ingrediente == "")
+            if (string.IsNullOrWhiteSpace(obj.Ingrediente))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "O campo Ingrediente deve ser preenchido";

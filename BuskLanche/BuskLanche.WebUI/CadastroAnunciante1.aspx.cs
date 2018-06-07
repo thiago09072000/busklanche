@@ -23,14 +23,14 @@ namespace BuskLanche.WebUI
             obj.NomeComercio = txtNomeRestaurante.Text;
             obj.Cnpj = txtCNPJ.Text;
 
-            if (obj.NomeComercio == "")
+            if (string.IsNullOrWhiteSpace(obj.NomeComercio))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Todos os campos devem ser preenchidos";
                 txtNomeRestaurante.Focus();
                 return;
             }
-            if (obj.Cnpj == "")
+            if (string.IsNullOrWhiteSpace(obj.Cnpj))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "O campo CNPJ deve ser preenchido";

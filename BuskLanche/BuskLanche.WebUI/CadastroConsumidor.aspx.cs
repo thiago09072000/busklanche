@@ -26,28 +26,28 @@ namespace BuskLanche.WebUI
             obj.Email = txtEmail.Text;
             obj.Cpf = txtCPF.Text;
 
-            if (obj.Nome == "")
+            if (string.IsNullOrWhiteSpace(obj.Nome))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Campo Nome deve ser preenchido";
                 txtNomeConsumidor.Focus();
                 return;
             }
-            if (obj.Senha == "")
+            if (string.IsNullOrWhiteSpace(obj.Senha))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Campo senha deve ser preenchido";
                 txtSenha.Focus();
                 return;
             }
-            if (obj.Email == "")
+            if (string.IsNullOrWhiteSpace(obj.Email))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Campo senha deve ser preenchido";
                 txtEmail.Focus();
                 return;
             }
-            if (obj.Cpf == "")
+            if (string.IsNullOrWhiteSpace(obj.Cpf))
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "Campo senha deve ser preenchido";
