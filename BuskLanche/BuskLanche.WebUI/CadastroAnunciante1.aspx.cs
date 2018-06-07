@@ -26,7 +26,7 @@ namespace BuskLanche.WebUI
             if (string.IsNullOrWhiteSpace(obj.NomeComercio))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "Todos os campos devem ser preenchidos";
+                lblMSG.Text = "O campo Nome Comercio deve ser preenchido";
                 txtNomeRestaurante.Focus();
                 return;
             }
