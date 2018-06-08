@@ -29,7 +29,44 @@ insert into CadastroComercio
 values
 ('123456789', 'nomeComercio', 'bairro', 'rua', 134, 'cep', 'complemento', 'nome', 'email', 'senha', 'cpf', 'telefone', 'estiloDoLanche', '22:00', '23:00', 'DescricaoComercio')
 
-select * from CadastroComercio
+-- select * from CadastroComercio
+
+--update CadastroComercio set nomeComercio = CONCAT(nomeComercio, idCadComercio), cep = '54866-666' where idCadComercio in (1, 2,3);
+
+--insert into CadastroComercio (cnpj,
+--nomeComercio,
+--bairro,
+--rua,
+--numero,
+--cep,
+--complemento,
+--nomeRepresentante,
+--emailRepresentante,
+--senhaRepresentante,
+--cpfRepresentante,
+--telefoneRepresentante,
+--estiloDoLanche,
+--horarioAbertura,
+--horarioEnceramento,
+--DescricaoComercio)
+--select cnpj,
+--nomeComercio,
+--bairro,
+--rua,
+--numero,
+--cep,
+--complemento,
+--nomeRepresentante,
+--emailRepresentante,
+--senhaRepresentante,
+--cpfRepresentante,
+--telefoneRepresentante,
+--estiloDoLanche,
+--horarioAbertura,
+--horarioEnceramento,
+--DescricaoComercio from CadastroComercio where idCadComercio = 2;
+
+
 
 create table CadastroConsumidor
 (
@@ -54,7 +91,7 @@ insert into CadastroDeCardapio
 values
 (1, 'nome', 'ingrediente', 24.00)
 
-select * from CadastroDeCardapio
+--select * from CadastroDeCardapio
 
 create table Avaliacoes
 (
@@ -66,4 +103,22 @@ create table Avaliacoes
 	dataHora		datetime not null default getdate()
 )
 
-select * from CadastroDeCardapio
+--select * from CadastroDeCardapio
+
+select * from Avaliacoes
+
+insert into Avaliacoes (idCadComercio, idCadConsumidor, avaliacao, comentario, dataHora)
+select idCadComercio, idCadConsumidor, avaliacao, comentario, getdate() from Avaliacoes where idCadComercio = 5;
+
+update Avaliacoes set avaliacao = case when idAvaliacoes % 2 = 0 then 3 else 5 end;
+
+
+select cast(avg(cast(avaliacao as decimal(15,2))) as decimal(15,2)) as media_nota from Avaliacoes where idCadComercio = 2;
+select avg(avaliacao) from Avaliacoes where idCadComercio = 5;
+
+
+SELECT 
+                                    *,
+                                    coalesce((select cast(avg(cast(avaliacao as decimal(15,2))) as decimal(15,2)) as media_nota from Avaliacoes where idCadComercio = CadastroComercio.idCadComercio), 0) as media_nota
+                                FROM CadastroComercio 
+								WHERE cep = @cep;
