@@ -13,7 +13,6 @@ namespace Teste1
         public void TestMethod1()
         {
             ConsumidorDAO L1 = new ConsumidorDAO();
-
         }
 
     }
