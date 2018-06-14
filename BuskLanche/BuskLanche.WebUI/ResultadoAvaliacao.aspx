@@ -21,20 +21,30 @@
                         <label class="control-label" style="font-size: x-large; margin-top: 10px">Média de avaliações:</label>
                         <table>
                             <tr>
-                                <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                               <td>
+                                    <asp:LinkButton ID="lnkEstrela1" runat="server" >
+                                        <img id="imgEstrela1" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela2" runat="server" >
+                                        <img id="imgEstrela2" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela3" runat="server" >
+                                        <img id="imgEstrela3" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela4" runat="server" >
+                                        <img id="imgEstrela4" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela5" runat="server" >
+                                        <img id="imgEstrela5" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                             </tr>
                         </table>

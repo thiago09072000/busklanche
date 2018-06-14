@@ -22,6 +22,50 @@ namespace BuskLanche.WebUI
                 var obj = new ComercioDAO().BuscarPorId(id);
                 lblNomeComercio.Text = obj.NomeComercio;
 
+
+                if (obj.NotaMedia >= 0 && obj.NotaMedia <= 1)
+                {
+                    imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                }
+                else if (obj.NotaMedia > 1 && obj.NotaMedia <= 2)
+                {
+                    imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                }
+                else if (obj.NotaMedia > 2 && obj.NotaMedia <= 3)
+                {
+                    imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                    imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                }
+                else if (obj.NotaMedia > 3 && obj.NotaMedia <= 4)
+                {
+                    imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela2.jpg"));
+                }
+                else if (obj.NotaMedia > 4 && obj.NotaMedia <= 5)
+                {
+                    imgEstrela1.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela2.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela3.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela4.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                    imgEstrela5.Attributes.Add("src", ResolveUrl("~/Images/estrela1.jpg"));
+                }
+
+
+
                 var lstAvaliacoes = new AvaliacoesDAO().BuscaPorComercio(id);
                 gridView.DataSource = lstAvaliacoes;
                 gridView.DataBind();
