@@ -402,5 +402,7 @@ namespace BuskLanche.DataAccess
 
             return (lstComercio);
         }
+
+        
     }
 }
