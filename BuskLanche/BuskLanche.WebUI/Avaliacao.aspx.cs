@@ -42,6 +42,14 @@ namespace BuskLanche.WebUI
                 Avaliacao = Convert.ToInt32(lblNotaAvaliacao.Value)
             };
 
+            if (string.IsNullOrWhiteSpace(obj.Comentario))
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O campo Comentário deve ser preenchido";
+                txtFazerComentario.Focus();
+                return;
+            }
+
             new AvaliacoesDAO().Inserir(obj);
 
             Response.Redirect(string.Format("Avaliacao.aspx?id={0}", idComercio));

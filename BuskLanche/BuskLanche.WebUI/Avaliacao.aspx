@@ -14,6 +14,16 @@
                         <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-size: 30px; margin-top: 10px">Nome do Comércio</asp:Label>
                     </div>
                 </div>
+                <asp:Panel ID="pnlMSG" runat="server" Visible="false">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Alerta!</strong>
+                                <asp:Label ID="lblMSG" runat="server" />
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
                 <div class="form-group">
                     <div class="col-lg-7">
                         <asp:Label ID="lblFazerComentario" runat="server" CssClass="control-label" Style="font-size: x-large; margin-top: 50px">Fazer Comentário:</asp:Label>
