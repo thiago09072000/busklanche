@@ -16,40 +16,32 @@
                         <asp:GridView ID="grdComercio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                             <Columns>
                                 <asp:TemplateField HeaderText="Nome">
-                                    <HeaderStyle Width="30%" />
-                                    <ItemStyle Width="30%" />
+                                    <HeaderStyle Width="40%" />
+                                    <ItemStyle Width="40%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("NomeComercio") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
                                 <asp:TemplateField HeaderText="Distância">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                    <HeaderStyle Width="20%" />
+                                    <ItemStyle Width="20%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblDistancia" runat="server" Text='<%# Bind("Distancia") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <%--<asp:TemplateField HeaderText="Preço">
-                                    <HeaderStyle Width="15%" />
-                                    <ItemStyle Width="15%" />
+                                <asp:TemplateField HeaderText="Duração">
+                                    <HeaderStyle Width="20%" />
+                                    <ItemStyle Width="20%" />
                                     <ItemTemplate>
-                                        <asp:Label ID="lblPreco" runat="server" Text='<%# Bind("Preco") %>'></asp:Label>
+                                        <asp:Label ID="lblDuracao" runat="server" Text='<%# Bind("Duracao") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Avaliações">
-                                    <HeaderStyle Width="20%" />
-                                    <ItemStyle Width="20%" />
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblAvaliações" runat="server" Text='<%# Bind("Avaliações") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>--%>
-
                                 <asp:TemplateField HeaderText="Disponibilidade">
-                                    <HeaderStyle Width="20%" />
-                                    <ItemStyle Width="20%" />
+                                    <HeaderStyle Width="15%" />
+                                    <ItemStyle Width="15%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblDisponibilidade" runat="server" Text='<%# Bind("Disponibilidade") %>'></asp:Label>
                                     </ItemTemplate>

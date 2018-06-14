@@ -43,13 +43,9 @@ namespace BuskLanche.Models
             }
         }
 
-        public string Distancia
-        {
-            get
-            {
-                return "2km";
-            }
-        }
+        public string Distancia { get; set; }
+
+        public string Duracao { get; set; }
 
         public decimal NotaMedia { get; set; }
 

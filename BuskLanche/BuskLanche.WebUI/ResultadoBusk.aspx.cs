@@ -18,8 +18,17 @@ namespace BuskLanche.WebUI
             if (!string.IsNullOrWhiteSpace(Request.QueryString["cep"]))
             {
                 var cep = Request.QueryString["cep"];
-                var lst = new ComercioDAO().BuscarPorCep(cep);
-                grdComercio.DataSource = lst;
+                var lst = new ComercioDAO().BuscarTodos();
+
+                lst.ForEach(c =>
+                {
+                    double distancia, duracao;
+                    DirectionsAPI.CalcularDistanciaEDuracao(cep.OnlyNumbers(), c.Cep.OnlyNumbers(), out distancia, out duracao);
+                    c.Distancia = string.Format("{0:n2} km", distancia / 1000);
+                    c.Duracao = string.Format("{0:n2} min", duracao / 60);
+                });
+
+                grdComercio.DataSource = lst.OrderBy(c => c.Distancia).ToList();
                 grdComercio.DataBind();
             }
         }

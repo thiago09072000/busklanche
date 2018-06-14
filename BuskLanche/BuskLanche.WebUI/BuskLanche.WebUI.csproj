@@ -293,6 +293,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DirectionsAPI.cs" />
     <Compile Include="EscolhaCadastro.aspx.cs">
       <DependentUpon>EscolhaCadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +308,7 @@
     <Compile Include="exibicaoComercio.aspx.designer.cs">
       <DependentUpon>exibicaoComercio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FormsAuthenticationUtil.cs" />
     <Compile Include="GerenciamentoComercio.aspx.cs">
       <DependentUpon>GerenciamentoComercio.aspx</DependentUpon>
