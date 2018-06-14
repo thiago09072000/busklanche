@@ -7,7 +7,7 @@
             <form id="Form2" runat="server" class="form-horizontal">
                 <div class="form-group">
                     <div class="col-lg-12">
-                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" style="font-weight: bold; color: red; font-size: 35px"></asp:Label>
+                        <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-weight: bold; color: red; font-size: 35px"></asp:Label>
                         <hr />
                     </div>
                 </div>
@@ -15,18 +15,18 @@
                     <div class="col-lg-5">
                         <div class="for-group">
                             <div class="col-lg-5">
-                                <asp:Label ID="lblTel" runat="server" CssClass="control-label" style="font-size: 20px">Telefone:</asp:Label>
+                                <asp:Label ID="lblTel" runat="server" CssClass="control-label" Style="font-size: 20px">Telefone:</asp:Label>
                             </div>
                             <div class="col-lg-7">
-                                <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                                <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
                             </div>
                         </div>
                         <div class="for-group">
                             <div class="col-lg-7">
-                                <asp:Label ID="lblDispo" runat="server" CssClass="control-label" style="font-size: 20px">Disponibilidade:</asp:Label>
+                                <asp:Label ID="lblDispo" runat="server" CssClass="control-label" Style="font-size: 20px">Disponibilidade:</asp:Label>
                             </div>
                             <div class="col-lg-5">
-                                <asp:Label ID="lblDisponibilidade" runat="server" CssClass="control-label" style="font-size: 20px"></asp:Label>
+                                <asp:Label ID="lblDisponibilidade" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -34,19 +34,29 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="Images/estrela1.jpg" style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela1" runat="server" >
+                                        <img id="imgEstrela1" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela1.jpg"  style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela2" runat="server" >
+                                        <img id="imgEstrela2" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela1.jpg"  style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela3" runat="server" >
+                                        <img id="imgEstrela3" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela4" runat="server" >
+                                        <img id="imgEstrela4" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                                 <td>
-                                    <img src="Images/estrela2.jpg"  style="width: 75px; height: 75px;" />
+                                    <asp:LinkButton ID="lnkEstrela5" runat="server" >
+                                        <img id="imgEstrela5" runat="server" src="Images/estrela2.jpg" style="width: 75px; height: 75px;" />
+                                    </asp:LinkButton>
                                 </td>
                             </tr>
                         </table>
