@@ -34,15 +34,15 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-4">
-                    <asp:CheckBox ID="txtMaisProx" runat="server" style="font-size: x-large" />
+                     <asp:RadioButton ID="txtMaisProx" GroupName="usuario" Text="" runat="server" Checked="true" />
                     <asp:Label ID="lblMaisProx" runat="server" CssClass="control-label" style="font-size: large">Mais Proxímos</asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <asp:CheckBox ID="txtMenorPreco" runat="server" style="font-size: x-large" />
-                    <asp:Label ID="lblMenorPreco" runat="server" CssClass="control-label" style="font-size: large">Menor Preço</asp:Label>
+                     <asp:RadioButton ID="txtMenorDuracao" GroupName="usuario" Text="" runat="server" Checked="false" />
+                    <asp:Label ID="lblMenorPreco" runat="server" CssClass="control-label" style="font-size: large">Menor Duração </asp:Label>
                 </div>
                 <div class="col-lg-4">
-                    <asp:CheckBox ID="txtMelhorAva" runat="server" style="font-size: x-large" />
+                     <asp:RadioButton ID="txtMelhorAva" GroupName="usuario" Text="" runat="server" Checked="false" />
                     <asp:Label ID="lblMelhorAva" runat="server" CssClass="control-label" style="font-size: large">Melhores Avaliações</asp:Label>
                 </div>
             </div>

@@ -73,7 +73,7 @@ namespace BuskLanche.WebUI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtMaisProx;
+        protected global::System.Web.UI.WebControls.RadioButton txtMaisProx;
         
         /// <summary>
         /// lblMaisProx control.
@@ -85,13 +85,13 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblMaisProx;
         
         /// <summary>
-        /// txtMenorPreco control.
+        /// txtMenorDuracao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtMenorPreco;
+        protected global::System.Web.UI.WebControls.RadioButton txtMenorDuracao;
         
         /// <summary>
         /// lblMenorPreco control.
@@ -109,7 +109,7 @@ namespace BuskLanche.WebUI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox txtMelhorAva;
+        protected global::System.Web.UI.WebControls.RadioButton txtMelhorAva;
         
         /// <summary>
         /// lblMelhorAva control.
