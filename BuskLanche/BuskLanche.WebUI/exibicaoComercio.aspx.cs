@@ -26,6 +26,7 @@ namespace BuskLanche.WebUI
                 lblNomeComercio.Text = obj.NomeComercio;
                 lblTelefone.Text = obj.TelefoneRepresentante;
                 lblDisponibilidade.Text = obj.Disponibilidade;
+                lblDescricao.Text = obj.DescricaoComercio;
 
                 if (obj.NotaMedia >= 0 && obj.NotaMedia <= 1)
                 {
