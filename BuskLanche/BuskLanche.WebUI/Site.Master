@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#" style="color: white; font-weight: 900; font-size: x-large">BUSKLANCHE</a>
+                    <a class="navbar-brand" href="#" style="color: white; font-weight: 900; font-size: x-large">BUSK LANCHE</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <button type="button" class="navbar-btn btn-warning navbar-right" style="font-weight: bold; font-size: large; margin-right: 25px; margin-left: 25px"><a href="Login.aspx">Login</a></button>
