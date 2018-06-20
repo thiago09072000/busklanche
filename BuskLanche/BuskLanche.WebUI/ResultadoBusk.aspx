@@ -16,8 +16,8 @@
                         <asp:GridView ID="grdComercio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                             <Columns>
                                 <asp:TemplateField HeaderText="Nome">
-                                    <HeaderStyle Width="40%" />
-                                    <ItemStyle Width="40%" />
+                                    <HeaderStyle Width="25%" />
+                                    <ItemStyle Width="25%" />
                                     <ItemTemplate>
                                         <asp:Label ID="lblNomeComercio" runat="server" Text='<%# Bind("NomeComercio") %>'></asp:Label>
                                     </ItemTemplate>
@@ -47,9 +47,20 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="&nbsp;" ShowHeader="False">
-                                    <HeaderStyle Width="5%" />
-                                    <ItemStyle Width="5%" />
+
+                                <asp:TemplateField HeaderText="Média de avaliações">
+                                    <HeaderStyle Width="10%" />
+                                    <ItemStyle Width="10%" />
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblAvaliacao" runat="server" Text='<%# Bind("NotaMedia") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+
+
+                                <asp:TemplateField HeaderText="Visualizar" ShowHeader="False">
+                                    <HeaderStyle Width="10%" />
+                                    <ItemStyle Width="10%" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnVisualizar" runat="server" Width="16px" Height="16px" ToolTip="Visualizar" OnClick="btnVisualizar_Click" CommandArgument='<%# Eval("Id") %>'>
                                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
