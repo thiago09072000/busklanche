@@ -31,13 +31,22 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Button btnConsumidor;
         
         /// <summary>
-        /// BbtnAnunciante control.
+        /// btnAnunciante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BbtnAnunciante;
+        protected global::System.Web.UI.WebControls.Button btnAnunciante;
+        
+        /// <summary>
+        /// btnVoltar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVoltar;
         
         /// <summary>
         /// lblValido control.
