@@ -47,7 +47,6 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-
                                 <asp:TemplateField HeaderText="Média de avaliações">
                                     <HeaderStyle Width="10%" />
                                     <ItemStyle Width="10%" />
@@ -56,11 +55,9 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-
-
                                 <asp:TemplateField HeaderText="Visualizar" ShowHeader="False">
-                                    <HeaderStyle Width="10%" />
-                                    <ItemStyle Width="10%" />
+                                    <HeaderStyle Width="10%" CssClass="text-center" />
+                                    <ItemStyle Width="10%" CssClass="text-center" />
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnVisualizar" runat="server" Width="16px" Height="16px" ToolTip="Visualizar" OnClick="btnVisualizar_Click" CommandArgument='<%# Eval("Id") %>'>
                                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>

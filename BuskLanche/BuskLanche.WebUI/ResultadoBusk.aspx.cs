@@ -15,9 +15,10 @@ namespace BuskLanche.WebUI
             if (IsPostBack)
                 return;
 
-            if (!string.IsNullOrWhiteSpace(Request.QueryString["cep"]))
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["cep"]) && !string.IsNullOrWhiteSpace(Request.QueryString["criterio"]))
             {
                 var cep = Request.QueryString["cep"];
+                var criterio = Request.QueryString["criterio"];
                 var lst = new ComercioDAO().BuscarTodos();
 
                 lst.ForEach(c =>
@@ -28,8 +29,21 @@ namespace BuskLanche.WebUI
                     c.Duracao = string.Format("{0:n2} min", duracao / 60);
                 });
 
-                grdComercio.DataSource = lst.OrderBy(c => c.Distancia).ToList();
-                grdComercio.DataBind();
+                if (criterio == "MaisProx")
+                {
+                    grdComercio.DataSource = lst.OrderBy(c => c.Distancia).ToList();
+                    grdComercio.DataBind();
+                }
+                else if (criterio == "MenorDur")
+                {
+                    grdComercio.DataSource = lst.OrderBy(c => c.Duracao).ToList();
+                    grdComercio.DataBind();
+                }
+                else
+                {
+                    grdComercio.DataSource = lst.OrderByDescending(c => c.NotaMedia).ToList();
+                    grdComercio.DataBind();
+                }
             }
         }
 

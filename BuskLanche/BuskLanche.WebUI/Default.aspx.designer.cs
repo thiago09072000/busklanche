@@ -67,13 +67,13 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblListarPor;
         
         /// <summary>
-        /// txtMaisProx control.
+        /// rdoMaisProx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton txtMaisProx;
+        protected global::System.Web.UI.WebControls.RadioButton rdoMaisProx;
         
         /// <summary>
         /// lblMaisProx control.
@@ -85,13 +85,13 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblMaisProx;
         
         /// <summary>
-        /// txtMenorDuracao control.
+        /// rdoMenorDuracao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton txtMenorDuracao;
+        protected global::System.Web.UI.WebControls.RadioButton rdoMenorDuracao;
         
         /// <summary>
         /// lblMenorPreco control.
@@ -103,13 +103,13 @@ namespace BuskLanche.WebUI {
         protected global::System.Web.UI.WebControls.Label lblMenorPreco;
         
         /// <summary>
-        /// txtMelhorAva control.
+        /// rdoMelhorAva control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton txtMelhorAva;
+        protected global::System.Web.UI.WebControls.RadioButton rdoMelhorAva;
         
         /// <summary>
         /// lblMelhorAva control.

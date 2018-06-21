@@ -26,7 +26,14 @@ namespace BuskLanche.WebUI
             }
             else
             {
-                Response.Redirect(string.Format("ResultadoBusk.aspx?cep={0}", txtInfCEP.Text));
+                var criterio = string.Empty;
+                if (rdoMaisProx.Checked)
+                    criterio = "MaisProx";
+                else if (rdoMenorDuracao.Checked)
+                    criterio = "MenorDur";
+                else
+                    criterio = "MelhorAva";
+                Response.Redirect(string.Format("ResultadoBusk.aspx?cep={0}&criterio={1}", txtInfCEP.Text, criterio));
             }
         }
     }
