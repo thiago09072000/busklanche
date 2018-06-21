@@ -98,13 +98,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-lg-6">
-                        <asp:Label ID="lblDes" runat="server" CssClass="control-label" Style="font-size: 20px">Descrição do Comércio:</asp:Label>
-                        <asp:Label ID="lblDescricao" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
-                    </div>
-                    <div class="col-lg-6 text-right">
+                    <div class="col-lg-12 text-right">
                         <asp:Button ID="btnAvaliar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Avaliar e Comentar" OnClick="btnAvaliar_Click" />
                         <asp:Button ID="btnFechar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Fechar" OnClick="btnFechar_Click" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <asp:Label ID="lblDes" runat="server" CssClass="control-label" Style="font-size: 20px">Descrição do Comércio:</asp:Label>
+                        <asp:Label ID="lblDescricao" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
                     </div>
                 </div>
             </form>
