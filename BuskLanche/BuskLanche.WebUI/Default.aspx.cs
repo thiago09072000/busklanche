@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuskLanche.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +22,15 @@ namespace BuskLanche.WebUI
             {
                 pnlMSG.Visible = true;
                 lblMSG.Text = "O campo CEP deve preenchidos";
+                txtInfCEP.Focus();
+                return;
+            }
+            var vdCep = new ComercioDAO().ValidarCEP(txtInfCEP.Text);
+
+            if (vdCep == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Cep é Invalido";
                 txtInfCEP.Focus();
                 return;
             }
