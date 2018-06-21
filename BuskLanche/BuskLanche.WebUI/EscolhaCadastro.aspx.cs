@@ -19,9 +19,14 @@ namespace BuskLanche.WebUI
             Response.Redirect("CadastroConsumidor.aspx");
         }
 
-        protected void BbtnAnunciante_Click(object sender, EventArgs e)
+        protected void btnAnunciante_Click(object sender, EventArgs e)
         {
             Response.Redirect("CadastroAnunciante1.aspx");
+        }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
         }
     }
 }
