@@ -62,6 +62,15 @@ namespace BuskLanche.WebUI
                 txtComplemento.Focus();
                 return;
             }
+            var vdCep = new ComercioDAO().ValidarCEP(txtCEP.Text);
+
+            if (vdCep == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Cep é Invalido";
+                txtCEP.Focus();
+                return;
+            }
 
             new ComercioDAO().Atualizar2(obj);
 

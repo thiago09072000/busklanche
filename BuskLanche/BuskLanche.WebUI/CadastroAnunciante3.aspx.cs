@@ -67,6 +67,26 @@ namespace BuskLanche.WebUI
                 return;
             }
 
+            var vdCpf = new ComercioDAO().ValidarCPF(txtCPF.Text);
+
+            if (vdCpf == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Cpf é Invalido";
+                txtCPF.Focus();
+                return;
+            }
+
+            var vdEmail = new ComercioDAO().ValidarEmail(txtEmail.Text);
+
+            if (vdEmail == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Email é Invalido";
+                txtEmail.Focus();
+                return;
+            }
+
             new ComercioDAO().Atualizar3(obj);
 
             Response.Redirect(string.Format("CadastroAnunciante4.aspx?id={0}", obj.Id));

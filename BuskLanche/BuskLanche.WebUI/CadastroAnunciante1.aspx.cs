@@ -37,6 +37,15 @@ namespace BuskLanche.WebUI
                 txtCNPJ.Focus();
                 return;
             }
+            var vdCnpj = new ComercioDAO().ValidarCNPJ(txtCNPJ.Text);
+
+            if (vdCnpj == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O CNPJ é Invalido";
+                txtCNPJ.Focus();
+                return;
+            }
 
             var id = new ComercioDAO().Inserir(obj);
             Response.Redirect(string.Format("CadastroAnunciante2.aspx?id={0}", id));

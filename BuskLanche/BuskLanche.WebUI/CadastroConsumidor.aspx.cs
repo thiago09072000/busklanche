@@ -55,14 +55,31 @@ namespace BuskLanche.WebUI
                 return;
             }
 
+            var vdCpf = new ConsumidorDAO().ValidarCPF(txtCPF.Text);
 
-            else
+            if (vdCpf == false)
             {
-                new ConsumidorDAO().Inserir(obj);
-
-                Response.Redirect("Login.aspx");
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Cpf é Invalido";
+                txtCPF.Focus();
+                return;
             }
-            
+
+            var vdEmail = new ConsumidorDAO().ValidarEmail(txtEmail.Text);
+
+            if (vdEmail == false)
+            {
+                pnlMSG.Visible = true;
+                lblMSG.Text = "O Email é Invalido";
+                txtEmail.Focus();
+                return;
+            }
+
+            new ConsumidorDAO().Inserir(obj);
+
+            Response.Redirect("Login.aspx");
+
+
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)
