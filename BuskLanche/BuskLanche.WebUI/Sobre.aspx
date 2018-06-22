@@ -12,11 +12,13 @@
                  
                
         </h2>
-        <div class="form-group">
-            <div class="col-md-12 text-right">
-                <asp:Button ID="btnVoltar" runat="server" Text="Voltar" class="btn btn-danger" Style="font-size: large; margin-top: 50px" OnClick="btnVoltar_Click" />
+        <form id="Form2" runat="server" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12 text-right">
+                    <asp:Button ID="btnVoltar" runat="server" Text="Voltar" class="btn btn-danger" Style="font-size: large; margin-top: 50px" OnClick="btnVoltar_Click" />
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
 </asp:Content>
