@@ -11,7 +11,13 @@ namespace BuskLanche.WebUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+                return;
+        }
 
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
         }
     }
 }
