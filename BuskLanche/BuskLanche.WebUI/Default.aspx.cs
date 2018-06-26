@@ -21,7 +21,7 @@ namespace BuskLanche.WebUI
             if (string.IsNullOrWhiteSpace(txtInfCEP.Text))
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "O campo CEP deve preenchidos";
+                lblMSG.Text = "O campo CEP deve ser preenchido!";
                 txtInfCEP.Focus();
                 return;
             }
@@ -30,7 +30,7 @@ namespace BuskLanche.WebUI
             if (vdCep == false)
             {
                 pnlMSG.Visible = true;
-                lblMSG.Text = "O Cep é Invalido";
+                lblMSG.Text = "CEP inválido!";
                 txtInfCEP.Focus();
                 return;
             }

@@ -7,20 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BuskLanche.WebUI {
-    
-    
-    public partial class _Default {
-        
-        /// <summary>
-        /// Form2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Form2;
-        
+namespace BuskLanche.WebUI
+{
+
+
+    public partial class _Default
+    {
+
         /// <summary>
         /// pnlMSG control.
         /// </summary>
@@ -29,7 +22,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlMSG;
-        
+
         /// <summary>
         /// lblMSG control.
         /// </summary>
@@ -38,7 +31,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMSG;
-        
+
         /// <summary>
         /// lblInfCEP control.
         /// </summary>
@@ -47,7 +40,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblInfCEP;
-        
+
         /// <summary>
         /// txtInfCEP control.
         /// </summary>
@@ -56,7 +49,16 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtInfCEP;
-        
+
+        /// <summary>
+        /// btnBuscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnBuscar;
+
         /// <summary>
         /// lblListarPor control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblListarPor;
-        
+
         /// <summary>
         /// rdoMaisProx control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdoMaisProx;
-        
+
         /// <summary>
         /// lblMaisProx control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMaisProx;
-        
+
         /// <summary>
         /// rdoMenorDuracao control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdoMenorDuracao;
-        
+
         /// <summary>
         /// lblMenorPreco control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMenorPreco;
-        
+
         /// <summary>
         /// rdoMelhorAva control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdoMelhorAva;
-        
+
         /// <summary>
         /// lblMelhorAva control.
         /// </summary>
@@ -119,14 +121,5 @@ namespace BuskLanche.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMelhorAva;
-        
-        /// <summary>
-        /// btnBuscar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
     }
 }
