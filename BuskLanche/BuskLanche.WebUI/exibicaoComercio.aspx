@@ -2,32 +2,32 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-group">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <asp:HiddenField ID="txtLocalizacao" runat="server" />
             <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-weight: bold; color: red; font-size: 35px"></asp:Label>
             <hr />
         </div>
     </div>
     <div class="form-group">
-        <div class="col-lg-5">
-            <div class="for-group">
-                <div class="col-lg-5">
+        <div class="col-md-5">
+            <div class="form-group">
+                <div class="col-md-6">
                     <asp:Label ID="lblTel" runat="server" CssClass="control-label" Style="font-size: 20px">Telefone:</asp:Label>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-md-6">
                     <asp:Label ID="lblTelefone" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
                 </div>
             </div>
-            <div class="for-group">
-                <div class="col-lg-7">
+            <div class="form-group">
+                <div class="col-md-6">
                     <asp:Label ID="lblDispo" runat="server" CssClass="control-label" Style="font-size: 20px">Disponibilidade:</asp:Label>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-md-6">
                     <asp:Label ID="lblDisponibilidade" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
                 </div>
             </div>
         </div>
-        <div class="col-lg-7 text-center">
+        <div class="col-md-7 text-center">
             <table>
                 <tr>
                     <td>
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-lg-5">
+        <div class="col-md-5">
             <style type="text/css">
                 #map {
                     width: 100%;
@@ -69,9 +69,10 @@
             </style>
             <div id="map"></div>
         </div>
-        <div class="col-lg-7">
+        <div class="col-md-7">
             <h2 style="color: red; text-align: center">Cardápio</h2>
-            <asp:GridView ID="grdCardapio" runat="server" AutoGenerateColumns="false" Width="100%" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
+            <asp:GridView ID="grdCardapio" runat="server" AutoGenerateColumns="false" Width="100%" 
+                CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                 <Columns>
                     <asp:TemplateField HeaderText="Nome">
                         <HeaderStyle Width="33%" />
@@ -101,14 +102,15 @@
         </div>
     </div>
     <div class="form-group">
-        <div class="col-lg-12 text-right">
-            <asp:Button ID="btnAvaliar" runat="server" CssClass="btn btn-danger" Style="font-size: large; margin-right: 100px" Text="Avaliar e Comentar" OnClick="btnAvaliar_Click" />
+        <div class="col-md-12 text-right">
+            <asp:Button ID="btnAvaliar" runat="server" CssClass="btn btn-danger" Style="font-size: large;" Text="Avaliar e Comentar" OnClick="btnAvaliar_Click" />
             <asp:Button ID="btnFechar" runat="server" CssClass="btn btn-danger" Style="font-size: large" Text="Fechar" OnClick="btnFechar_Click" />
         </div>
     </div>
     <div class="form-group">
-        <div class="col-lg-12">
-            <asp:Label ID="lblDes" runat="server" CssClass="control-label" Style="font-size: 20px">Descrição do Comércio:</asp:Label>
+        <div class="col-md-12">
+            <asp:Label ID="lblDes" runat="server" CssClass="control-label" Style="font-size: 20px; font-weight: bold;">Descrição do Comércio:</asp:Label>
+            <br />
             <asp:Label ID="lblDescricao" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
         </div>
     </div>
