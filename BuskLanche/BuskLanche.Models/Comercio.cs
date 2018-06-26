@@ -43,6 +43,14 @@ namespace BuskLanche.Models
             }
         }
 
+        public string Localizacao
+        {
+            get
+            {
+                return string.Format("{0} {1} - {2} - {3}", this.Rua, this.Numero, this.Bairro, this.Cep);
+            }
+        }
+
         public string Distancia { get; set; }
 
         public string Duracao { get; set; }

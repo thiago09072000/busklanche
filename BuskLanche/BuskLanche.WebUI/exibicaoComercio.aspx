@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-group">
         <div class="col-lg-12">
+            <asp:HiddenField ID="txtLocalizacao" runat="server" />
             <asp:Label ID="lblNomeComercio" runat="server" CssClass="control-label" Style="font-weight: bold; color: red; font-size: 35px"></asp:Label>
             <hr />
         </div>
@@ -60,7 +61,13 @@
     </div>
     <div class="form-group">
         <div class="col-lg-5">
-            <iframe height="450" frameborder="0" style="border: 0; width: 100%;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJu9SrHHLj3JQRpWGqaGH5P48&key=AIzaSyAqehYTz56_xwTse58k50EXxXZqCAtewsA"></iframe>
+            <style type="text/css">
+                #map {
+                    width: 100%;
+                    height: 500px;
+                }
+            </style>
+            <div id="map"></div>
         </div>
         <div class="col-lg-7">
             <h2 style="color: red; text-align: center">Cardápio</h2>
@@ -75,8 +82,8 @@
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="Ingredientes">
-                        <HeaderStyle Width="33%" />
-                        <ItemStyle Width="33%" />
+                        <HeaderStyle Width="34%" />
+                        <ItemStyle Width="34%" />
                         <ItemTemplate>
                             <asp:Label ID="lblIngredientes" runat="server" Text='<%# Bind("Ingrediente") %>'></asp:Label>
                         </ItemTemplate>
@@ -105,4 +112,31 @@
             <asp:Label ID="lblDescricao" runat="server" CssClass="control-label" Style="font-size: 20px"></asp:Label>
         </div>
     </div>
+    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0sJrHxqFHVLAhgPlQb2PMgu8N46ZElcA&callback=initMap"></script>
+    <script type="text/javascript">
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: { lat: -34.397, lng: 150.644 }
+            });
+
+            var geocoder = new google.maps.Geocoder();
+            geocodeAddress(geocoder, map);
+        }
+
+        function geocodeAddress(geocoder, resultsMap) {
+            var address = document.getElementById('MainContent_txtLocalizacao').value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+    </script>
 </asp:Content>
